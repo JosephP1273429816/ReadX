@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:backgroundTint="@color/primary"
+    tools:context=".view.login">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/Logo" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/fontprin"
+        android:hint="@string/Contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#26A69A"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/fontprin"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColorHint="#26A69A"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <Button
+        android:id="@+id/iniciarseccion"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bottonr"
+        android:fontFamily="@font/fontprin"
+        android:text="@string/iniciar_sesion"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/registrarseccion"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:background="@drawable/botton"
+        android:fontFamily="@font/fontprin"
+        android:text="@string/registrar"
+        android:textColor="#26A69A"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iniciarseccion" />
+
+    <Button
+        android:id="@+id/resetPasswordButton"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bottonr"
+        android:fontFamily="@font/fontprin"
+        android:text="@string/restablecer_contrase_a"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrarseccion"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetPasswordButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

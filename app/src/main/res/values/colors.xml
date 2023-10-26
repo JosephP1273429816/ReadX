@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#202732</color>
+    <color name="primarySecond">#008577</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transp">#00FFFFFF</color>
+    <color name="bar">#0C5B54</color>
+    <color name="button_normal">#008577</color>
+    <color name="correctAnswerColor">#FF00FF00</color>
+    <color name="incorrectAnswerColor">#FF0000</color>
+    <color name="correct_button_pressed">#FF00FF00</color>
+    <color name="correct_button_normal">#FF00FF00</color>
+    <color name="wrong_button_pressed">#FFFF0000</color>
+    <color name="wrong_button_normal">#FFFF0000</color>
+
+</resources>

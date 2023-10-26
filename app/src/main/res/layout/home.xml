@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:backgroundTint="@color/primary"
+    tools:context=".view.home">
+
+
+    <View
+        android:id="@+id/viewBarDos"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenida" />
+
+    <ImageView
+        android:id="@+id/Lgo"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon"
+        tools:ignore="UnknownId"
+        android:contentDescription="@string/Logo" />
+
+    <TextView
+        android:id="@+id/bienvenida"
+        android:layout_width="237dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/fontprin"
+        android:text="@string/bienvenido_name"
+        android:textColor="#26A69A"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck,UnknownId" />
+
+    <TextView
+        android:id="@+id/activityPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/fontprin"
+        android:text="@string/tu_actividad"
+        android:textColor="#26A69A"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenida"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:id="@+id/ajustes"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:background="@color/transp"
+        android:contentDescription="@string/ajustes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/jugar"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/jugar"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:background="@color/transp"
+        android:contentDescription="@string/amigos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/soporte"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:background="@color/transp"
+        android:contentDescription="@string/amigos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toEndOf="@+id/jugar"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/texConfi"
+        android:layout_width="89dp"
+        android:layout_height="18dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/fontprin"
+        android:gravity="center"
+        android:text="@string/ajustes"
+        android:textColor="#26A69A"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ajustes"
+        app:layout_constraintEnd_toEndOf="@+id/ajustes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ajustes"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        tools:ignore="SmallSp,TextSizeCheck,UnknownId" />
+
+    <TextView
+        android:id="@+id/texGame"
+        android:layout_width="84dp"
+        android:layout_height="18dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/fontprin"
+        android:gravity="center"
+        android:text="@string/jugar"
+        android:textColor="#26A69A"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/jugar"
+        app:layout_constraintEnd_toEndOf="@+id/jugar"
+        app:layout_constraintStart_toStartOf="@+id/jugar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        tools:ignore="SmallSp,TextSizeCheck,TextSizeCheck,UnknownId" />
+
+    <TextView
+        android:id="@+id/texFriend"
+        android:layout_width="83dp"
+        android:layout_height="18dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/fontprin"
+        android:gravity="center"
+        android:text="@string/amigos"
+        android:textColor="#26A69A"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/soporte"
+        app:layout_constraintEnd_toEndOf="@+id/soporte"
+        app:layout_constraintStart_toStartOf="@+id/soporte"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="SmallSp,TextSizeCheck,UnknownId" />
+
+    <ImageView
+        android:id="@+id/imagegame"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/ImgGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/jugar"
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/game"
+        app:tint="@color/primarySecond" />
+
+    <ImageView
+        android:id="@+id/imageFriend"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/friend"
+        android:backgroundTint="@color/primarySecond"
+        app:layout_constraintBottom_toBottomOf="@+id/soporte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toEndOf="@+id/imagegame"
+        tools:ignore="ContentDescription,ImageContrastCheck,ImageContrastCheck,VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/imageConfi"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/Confimg"
+        android:background="@drawable/confi"
+        android:backgroundTint="@color/primarySecond"
+        app:layout_constraintBottom_toBottomOf="@+id/ajustes"
+        app:layout_constraintEnd_toStartOf="@+id/imagegame"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <View
+        android:id="@+id/viewBar"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/bar"
+        app:layout_constraintBottom_toTopOf="@+id/jugar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

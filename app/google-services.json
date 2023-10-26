@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "52516676378",
+    "firebase_url": "https://readxapp-default-rtdb.firebaseio.com",
+    "project_id": "readxapp",
+    "storage_bucket": "readxapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52516676378:android:712514515911b9b58d42a3",
+        "android_client_info": {
+          "package_name": "com.joseph.readxapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkza61ueJQp6RDQK0FLYP0Y8KT9IfsqDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
