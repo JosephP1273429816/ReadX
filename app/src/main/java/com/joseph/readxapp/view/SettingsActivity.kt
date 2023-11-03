@@ -6,16 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
 import com.joseph.readxapp.R
 import com.joseph.readxapp.view.login
 import android.app.AlertDialog
 import android.text.InputType
 import android.widget.EditText
-import com.google.firebase.auth.EmailAuthProvider
 import com.joseph.readxapp.data.TimeTracker
 
 class SettingsActivity : AppCompatActivity() {
@@ -37,12 +35,8 @@ class SettingsActivity : AppCompatActivity() {
         deleteAccountButton = findViewById(R.id.deleteAccountButton)
 
         logoutButton.setOnClickListener {
-            // Cerrar la sesión del usuario actual
-            auth.signOut()
-            // Redirigir al usuario a la pantalla de inicio de sesión
-            val intent = Intent(this, login::class.java)
-            startActivity(intent)
-            finish() // Cierra la actividad actual
+            // Mostrar un diálogo de confirmación antes de cerrar sesión
+            showLogoutConfirmationDialog()
         }
 
         deleteAccountButton.setOnClickListener {
@@ -90,8 +84,99 @@ class SettingsActivity : AppCompatActivity() {
         dialog.show()
     }
 
+    private fun showLogoutConfirmationDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Confirmar cierre de sesión")
+        builder.setMessage("¿Está seguro de que desea cerrar la sesión?")
+
+        builder.setPositiveButton("Sí") { dialog, _ ->
+            // Cerrar la sesión del usuario actual
+            auth.signOut()
+            // Redirigir al usuario a la pantalla de inicio de sesión
+            val intent = Intent(this, login::class.java)
+            startActivity(intent)
+            finish() // Cierra la actividad actual
+            dialog.dismiss()
+        }
+
+        builder.setNegativeButton("No") { dialog, _ ->
+            dialog.cancel()
+        }
+
+        val dialog = builder.create()
+        dialog.show()
+    }
+
     private fun verifyPasswordAndDeleteAccount(password: String) {
-        // Resto del código para eliminar la cuenta (ya proporcionado en tu código anterior)
+        val user = auth.currentUser
+
+        if (user != null) {
+            val userEmail = user.email
+
+            if (userEmail != null) {
+                // Reautenticar al usuario
+                val credential = EmailAuthProvider.getCredential(userEmail, password)
+                user.reauthenticate(credential)
+                    .addOnCompleteListener { reauthTask ->
+                        if (reauthTask.isSuccessful) {
+                            // La reautenticación fue exitosa, ahora puedes eliminar la cuenta
+                            val userId = user.uid
+
+                            val usersDocRef = firestore.collection("users").document(userId)
+                            val timeUserDocRef = firestore.collection("TimeUser").document(userId)
+                            val scoresDocRef = firestore.collection("scores").document(userId)
+
+                            // Borrar los documentos en Firestore
+                            usersDocRef.delete()
+                                .addOnCompleteListener { deleteUserTask ->
+                                    if (deleteUserTask.isSuccessful) {
+                                        timeUserDocRef.delete()
+                                            .addOnCompleteListener { deleteTimeUserTask ->
+                                                if (deleteTimeUserTask.isSuccessful) {
+                                                    scoresDocRef.delete()
+                                                        .addOnCompleteListener { deleteScoresTask ->
+                                                            if (deleteScoresTask.isSuccessful) {
+                                                                // Todos los documentos se han eliminado con éxito
+                                                                user.delete()
+                                                                    .addOnCompleteListener { deleteAccountTask ->
+                                                                        if (deleteAccountTask.isSuccessful) {
+                                                                            // La cuenta se ha eliminado exitosamente
+                                                                            showSuccessMessage("Cuenta eliminada con éxito. Vuelva pronto.")
+                                                                            // Redirigir al usuario a la pantalla de inicio de sesión
+                                                                            val intent = Intent(this, login::class.java)
+                                                                            startActivity(intent)
+                                                                            finish() // Cierra la actividad actual
+                                                                        } else {
+                                                                            // Ocurrió un error al eliminar la cuenta
+                                                                            showError("Error al eliminar la cuenta: ${deleteAccountTask.exception?.message}")
+                                                                        }
+                                                                    }
+                                                            } else {
+                                                                // Error al eliminar el documento "scores"
+                                                                showError("Error al eliminar el documento 'scores': ${deleteScoresTask.exception?.message}")
+                                                            }
+                                                        }
+                                                } else {
+                                                    // Error al eliminar el documento "TimeUser"
+                                                    showError("Error al eliminar el documento 'TimeUser': ${deleteTimeUserTask.exception?.message}")
+                                                }
+                                            }
+                                    } else {
+                                        // Error al eliminar el documento "users"
+                                        showError("Error al eliminar el documento 'users': ${deleteUserTask.exception?.message}")
+                                    }
+                                }
+                        } else {
+                            // Ocurrió un error al reautenticar al usuario (contraseña incorrecta)
+                            showError("Error al reautenticar al usuario: ${reauthTask.exception?.message}")
+                        }
+                    }
+            } else {
+                showError("El correo electrónico del usuario es nulo.")
+            }
+        } else {
+            showError("El usuario no está autenticado.")
+        }
     }
 
     override fun onStart() {

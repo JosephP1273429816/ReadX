@@ -10,68 +10,29 @@
     android:theme="@style/AppTheme"
     tools:ignore="ExtraText">
 
-    <View
-        android:id="@+id/viewBarDos3"
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_marginBottom="2dp"
-        android:background="@color/bar"
-        app:layout_constraintBottom_toTopOf="@+id/jugar"
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/linearRankingGlobal"
-        android:layout_width="144dp"
-        android:layout_height="157dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/chartTitle2"
-        app:layout_constraintTop_toBottomOf="@+id/chartTitle2"
-        tools:ignore="TextSizeCheck">
-
-        <TextView
-            android:id="@+id/textViewGlobalRanking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/ranking_global"
-            android:textColor="@color/white"
-            android:textSize="10sp"
-            tools:ignore="SmallSp" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearRankingSemanal"
-        android:layout_width="173dp"
-        android:layout_height="164dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/chartTitle2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chartTitle2"
-        tools:ignore="TextSizeCheck">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/boton"
+        android:importantForAccessibility="no" />
 
-        <TextView
-            android:id="@+id/textViewSemanalRanking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/ranking_semanal"
-            android:textColor="@color/white"
-            android:textSize="10sp"
-            tools:ignore="SmallSp" />
-
-
-    </LinearLayout>
+    <ListView
+        android:id="@+id/rankingListView"
+        android:layout_width="191dp"
+        android:layout_height="252dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/boton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chartTitle2" />
 
     <TextView
         android:id="@+id/chartTitle2"
@@ -124,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/barChart"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="@string/promedio_semanal"
         android:textColor="@color/white"
         android:textSize="10sp"
@@ -133,35 +94,27 @@
         app:layout_constraintTop_toBottomOf="@+id/barChart"
         tools:ignore="SmallSp" />
 
-    <View
-        android:id="@+id/viewBarDos"
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:background="@color/bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Lgo" />
 
     //barra de tareas
 
     <ImageView
         android:id="@+id/Lgo"
-        android:layout_width="73dp"
-        android:layout_height="69dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
         android:contentDescription="@string/Logo"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/icon"
+        app:srcCompat="@drawable/icon_home"
         tools:ignore="UnknownId" />
-
 
     <TextView
         android:id="@+id/bienvenida"
         android:layout_width="237dp"
         android:layout_height="49dp"
+        android:layout_marginTop="5dp"
         android:gravity="center"
         android:text="@string/bienvenido_name"
         android:textColor="@color/primarySecond"
@@ -171,8 +124,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextSizeCheck,UnknownId,TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@color/boton"
+        android:importantForAccessibility="no" />
 
     <Button
         android:id="@+id/ajustes"

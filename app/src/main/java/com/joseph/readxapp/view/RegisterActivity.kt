@@ -68,7 +68,7 @@ class RegisterActivity : AppCompatActivity() {
 
                                 val userId = it.uid // Obtén el UID del usuario
 
-                                // Guardar datos en Firestore
+                                // Guardar datos en Firestore en la colección "users"
                                 db.collection("users")
                                     .document(userId) // Usa el UID del usuario
                                     .set(userData)
@@ -76,7 +76,9 @@ class RegisterActivity : AppCompatActivity() {
                                         // Datos de usuario guardados con éxito
 
                                         // Crear un documento de puntaje para el usuario recién registrado
-                                        val initialScore = UserScore() // Utiliza los valores iniciales del data class
+                                        val initialScore = UserScore(name) // Crea una instancia de UserScore con el nombre
+                                        // Configura otros campos de inicialización si es necesario
+
                                         db.collection("scores")
                                             .document(userId) // Usa el UID del usuario
                                             .set(initialScore)
@@ -123,12 +125,10 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun isValidEmail(email: String): Boolean {
-
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
     private fun isValidPassword(password: String): Boolean {
-
         return password.length >= 6
     }
 }

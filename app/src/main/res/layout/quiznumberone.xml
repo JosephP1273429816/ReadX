@@ -6,12 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".view.QuizOne">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/boton" />
+
     <ImageButton
         android:id="@+id/botonIrAHomeDos"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/atras"
         android:backgroundTint="@color/primarySecond"
         android:contentDescription="@string/atras"
@@ -65,7 +76,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:text="@string/informaci_n"
         android:textColor="@color/primarySecond"
         android:textSize="20sp"

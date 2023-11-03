@@ -9,12 +9,39 @@
     android:backgroundTint="@color/primary"
     tools:context=".view.RegisterActivity">
 
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/boton" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="299dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:gravity="fill_vertical"
+        android:text="Lee para expandir tus horizontes y descubrir un mundo de posibilidades."
+        android:textColor="@color/primarySecond"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
     <ImageButton
         android:id="@+id/botonIrAHomeDos2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/atras"
         android:backgroundTint="@color/primarySecond"
         android:contentDescription="@string/atras"
@@ -38,12 +65,12 @@
         android:id="@+id/editTextTextPassword"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:autofillHints=""
         android:background="@drawable/edit"
         android:ems="10"
-        android:importantForAccessibility="no"
         android:hint="@string/Contraseña"
+        android:importantForAccessibility="no"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:paddingStart="10dp"
@@ -53,18 +80,18 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry,TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:autofillHints=""
         android:background="@drawable/edit"
-        android:importantForAccessibility="no"
         android:ems="10"
         android:hint="@string/email"
+        android:importantForAccessibility="no"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:paddingStart="10dp"
@@ -74,19 +101,18 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNombre"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry,TextContrastCheck" />
 
     <Button
         android:id="@+id/registrarseccion"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/bottonr"
         android:text="@string/registrar"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="15sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
@@ -110,9 +136,9 @@
         android:layout_marginTop="76dp"
         android:autofillHints=""
         android:background="@drawable/edit"
-        android:importantForAccessibility="no"
         android:ems="10"
         android:hint="@string/name"
+        android:importantForAccessibility="no"
         android:inputType="text"
         android:paddingStart="10dp"
         android:textColorHint="#26A69A"
@@ -121,5 +147,5 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry,TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

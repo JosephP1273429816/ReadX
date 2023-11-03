@@ -10,6 +10,17 @@
 
     <!-- Botón para cerrar sesión -->
 
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/boton" />
+
     <TextView
         android:id="@+id/errorTextView2"
         android:layout_width="wrap_content"
@@ -23,22 +34,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/deleteAccountButton" />
 
+
     <TextView
         android:id="@+id/settingsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:paddingTop="16dp"
         android:text="@string/configuraci_n"
         android:textColor="@color/primarySecond"
         android:textSize="20sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Botón para eliminar cuenta -->
 
     <Button
         android:id="@+id/logoutButton"
@@ -49,7 +57,6 @@
         android:fontFamily="@font/fonttex"
         android:text="@string/cerrar_sesi_n"
         android:textAllCaps="false"
-        android:textStyle="bold"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/deleteAccountButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +73,6 @@
         android:text="@string/eliminar_cuenta"
         android:textColor="@color/black"
         android:textAllCaps="false"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -75,10 +81,10 @@
 
     <ImageButton
         android:id="@+id/botonIrAHomeDos"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/atras"
         android:backgroundTint="@color/primarySecond"
         android:contentDescription="@string/atras"

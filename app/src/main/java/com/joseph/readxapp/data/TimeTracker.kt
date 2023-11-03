@@ -58,7 +58,7 @@ class TimeTracker private constructor(context: Context) {
             // Redondea el valor al minuto más cercano
             val roundedTimeMillis = convertMillisToTimeFormat(newTimeMillis)
 
-            // Actualiza el valor redondeado
+            // Actualiza el valor redondeado en Firestore
             val data = hashMapOf<String, Any>(
                 dayOfWeek to roundedTimeMillis
             )
@@ -68,14 +68,14 @@ class TimeTracker private constructor(context: Context) {
 
     fun resetWeeklyTime() {
         val currentWeek = Calendar.getInstance().get(Calendar.WEEK_OF_YEAR)
-        // Guarda la semana actual como la última semana de reinicio
+        // Guarda la semana actual como la última semana de reinicio en SharedPreferences
         val editor = sharedPrefs.edit()
         editor.putInt(lastResetWeekKey, currentWeek)
         editor.apply()
     }
 
     private fun resetTime() {
-        // No es necesario realizar ninguna operación aquí, ya que el tiempo se acumula en lugar de reemplazarse por 0.
+        // Reiniciar el tiempo o realizar otras operaciones según sea necesario
     }
 
     private fun getDayOfWeek(): String {
@@ -93,3 +93,4 @@ class TimeTracker private constructor(context: Context) {
         return minutes
     }
 }
+

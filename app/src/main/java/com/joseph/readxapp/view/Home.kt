@@ -2,8 +2,11 @@ package com.joseph.readxapp.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.joseph.readxapp.R
+import android.widget.ListView
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -25,6 +28,7 @@ class Home : AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
     private val timeTracker: TimeTracker by lazy { TimeTracker.getInstance(this) }
     private var timeUser: TimeUser? = null
+    private val TAG = "Home"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +43,38 @@ class Home : AppCompatActivity() {
         val bienvenidaTextView = findViewById<TextView>(R.id.bienvenida)
         val promedioTextView = findViewById<TextView>(R.id.promedioTextView)
         val barChart = findViewById<BarChart>(R.id.barChart)
+
+        // Obtén una referencia a tu ListView
+        val listView = findViewById<ListView>(R.id.rankingListView)
+
+        // Crea un mapa para almacenar los nombres de usuario y sus puntuaciones
+        val userScores = mutableMapOf<String?, Long?>()
+
+        // Oyente en tiempo real para la colección "scores"
+        db.collection("scores")
+            .addSnapshotListener { snapshots, e ->
+                if (e != null) {
+                    Log.w(TAG, "Escucha fallida.", e)
+                    return@addSnapshotListener
+                }
+
+                userScores.clear()
+
+                for (document in snapshots!!) {
+                    val userName = document.getString("name")
+                    val globalScore = document.getLong("weeklyScore")
+                    userScores[userName] = globalScore
+                }
+
+                // Crea una lista para el ArrayAdapter
+                val displayList = userScores.toList().sortedByDescending { (_, value) -> value}.mapIndexed { index, pair -> "${index + 1}. ${pair.first}: ${pair.second ?: "N/A"}" }
+
+                // Crear un ArrayAdapter personalizado para utilizar el diseño list_item.xml
+                val adapter = ArrayAdapter(this, R.layout.list_item, R.id.list_item_text, displayList)
+
+                // Asigna el ArrayAdapter a tu ListView
+                listView.adapter = adapter
+            }
 
         soporteButton.setOnClickListener {
             val intent = Intent(this, soport::class.java)
@@ -83,6 +119,8 @@ class Home : AppCompatActivity() {
 
             // Configura la gráfica de barras
             barChart.setDrawGridBackground(false) // Quita la cuadrícula de fondo
+            val backgroundColor = ContextCompat.getColor(this, R.color.boton)
+            barChart.setBackgroundColor(backgroundColor)
             barChart.description.isEnabled = false // Quita la descripción
 
             // Configura el eje X para mostrar los nombres de los días de la semana
@@ -96,13 +134,17 @@ class Home : AppCompatActivity() {
             xAxis.typeface = typeface
             xAxis.textColor = ContextCompat.getColor(this, R.color.white)
 
+
             // Configura el eje Y para que comience en 0
             val yAxisLeft = barChart.axisLeft
             yAxisLeft.axisMinimum = 0f // Establece el valor mínimo del eje Y en 0
             yAxisLeft.textColor = ContextCompat.getColor(this, R.color.white)
+            yAxisLeft.textColor = ContextCompat.getColor(this, R.color.white)
 
             val yAxisRight = barChart.axisRight
             yAxisRight.axisMinimum = 0f // Establece el valor mínimo del eje Y en 0
+            yAxisRight.textColor = ContextCompat.getColor(this, R.color.white)
+
 
             // Recupera los datos de Firestore para llenar la gráfica de barras
             db.collection("TimeUser").document(userId).get().addOnSuccessListener { documentSnapshot ->
@@ -129,7 +171,10 @@ class Home : AppCompatActivity() {
 
                     xAxis.valueFormatter = IndexAxisValueFormatter(listOf("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado")) // Establece las etiquetas del eje X como los días de la semana
 
-                    val dataSet = BarDataSet(entries, "") // Crea un conjunto de datos para la gráfica de barras sin título
+                    val dataSet = BarDataSet(entries, "")
+                    dataSet.valueTextColor = ContextCompat.getColor(this, R.color.white)
+                    dataSet.valueTextSize = 10f
+                    dataSet.setDrawValues(true)
 
                     // Aquí es donde puedes cambiar el color a uno personalizado
                     dataSet.color = ContextCompat.getColor(this, R.color.primarySecond)
