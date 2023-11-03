@@ -34,7 +34,7 @@ class login : AppCompatActivity() {
         // Verifica si el usuario ya ha iniciado sesión
         if (mAuth.currentUser != null) {
             // El usuario ya ha iniciado sesión, redirige a la pantalla "home"
-            startActivity(Intent(this, home::class.java))
+            startActivity(Intent(this, Home::class.java))
             finish()
         }
 
@@ -42,27 +42,31 @@ class login : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
 
-            mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        // Inicio de sesión exitoso
-                        val user = mAuth.currentUser
-                        // Redirige a la actividad "home"
-                        startActivity(Intent(this, home::class.java))
-                        finish()
-                    } else {
-                        // El inicio de sesión falló
-                        val exception = task.exception
-                        if (exception is FirebaseAuthInvalidCredentialsException) {
-                            errorTextView.text = "Credenciales incorrectas. Inténtalo de nuevo."
+            if (email.isEmpty() || password.isEmpty()) {
+                errorTextView.text = "Por favor, ingresa tu correo y contraseña."
+            } else {
+                mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // Inicio de sesión exitoso
+                            val user = mAuth.currentUser
+                            // Redirige a la actividad "home"
+                            startActivity(Intent(this, Home::class.java))
+                            finish()
                         } else {
-                            errorTextView.text = "Error al iniciar sesión. Inténtalo más tarde."
+                            // El inicio de sesión falló
+                            val exception = task.exception
+                            if (exception is FirebaseAuthInvalidCredentialsException) {
+                                errorTextView.text = "Credenciales incorrectas. Inténtalo de nuevo."
+                            } else {
+                                errorTextView.text = "Error al iniciar sesión. Inténtalo más tarde."
+                            }
                         }
                     }
-                }
+            }
         }
+
         registerButton.setOnClickListener {
-            // Crear un Intent para iniciar la actividad de registro (asegúrate de que RegisterActivity::class.java sea el nombre correcto de tu actividad de registro)
             val intent = Intent(this, RegisterActivity::class.java)
 
             // Iniciar la actividad de registro
@@ -71,14 +75,24 @@ class login : AppCompatActivity() {
 
         resetPasswordButton.setOnClickListener {
             val email = emailEditText.text.toString()
-            mAuth.sendPasswordResetEmail(email)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        errorTextView.text = "Se ha enviado un correo para restablecer la contraseña."
-                    } else {
-                        errorTextView.text = "Error al enviar el correo de restablecimiento de contraseña."
+
+            if (email.isEmpty()) {
+                errorTextView.text = "Por favor, ingresa tu correo electrónico."
+            } else {
+                mAuth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            errorTextView.text = "Se ha enviado un correo para restablecer la contraseña."
+                        } else {
+                            val exception = task.exception
+                            if (exception is FirebaseAuthInvalidCredentialsException) {
+                                errorTextView.text = "Correo electrónico inválido. Introduce un correo válido."
+                            } else {
+                                errorTextView.text = "Error al enviar el correo de restablecimiento de contraseña."
+                            }
+                        }
                     }
-                }
+            }
         }
     }
 }

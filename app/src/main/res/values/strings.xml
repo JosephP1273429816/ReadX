@@ -1,14 +1,16 @@
 <resources>
-    <string name="app_name">ReadXapp</string>
+    <string name="app_name">ReadX</string>
     <string name="title_activity_home_detail_host">homeDetailHostActivity</string>
     <string name="title_home_list">home</string>
     <string name="title_home_detail">home Detail</string>
     <string name="tu_actividad">Tu actividad</string>
     <string name="ajustes">ajustes</string>
     <string name="amigos">soporte</string>
-    <string name="bienvenido_name">Bienvenido Name</string>
+    <string name="bienvenido_name">Hola nuevamente %1$s</string>
     <string name="jugar">jugar</string>
     <string name="Logo">LOGO</string>
+    <string name="ranking_semanal">Ranking Semanal</string>
+    <string name="ranking_global">Ranking Global</string>
     <string name="imgConf">..</string>
     <string name="ImgGame">...</string>
     <string name="tresPuntosImg">...</string>
@@ -19,24 +21,17 @@
     <string name="Emai">E-mai</string>
     <string name="Contraseña">Contraseña</string>
     <string name="ingresar">Ingresar</string>
-    <string name="registrar">Registrar</string>
+    <string name="registrar">Crear cuenta nueva</string>
     <string name="title_activity_login">login</string>
-    <!-- Settings Activity Title -->
+    <string name="promedio_semanal">Promedio semanal: %d minutos</string>
     <string name="title_activity_settings">SettingsActivity</string>
-
-    <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
-
-    <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
     <string name="reply_title">Default reply action</string>
-
-    <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="title_activity_quiz">QuizActivity</string>
     <string name="large_text">
@@ -129,7 +124,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -178,11 +172,30 @@
     <string name="respuesta_3">Respuesta 3</string>
     <string name="imgRank">TODO</string>
     <string name="puntaje_0">Puntaje: 0</string>
-    <string name="restablecer_contrase_a">restablecer contraseña</string>
-    <string name="email">Email</string>
-    <string name="iniciar_sesion">iniciar sesion</string>
-    <string name="name">Name</string>
+    <string name="restablecer_contrase_a">¿Olvidaste tu contraseña?</string>
+    <string name="email">Correo electrónico</string>
+    <string name="iniciar_sesion">Iniciar sesion</string>
+    <string name="name">Nombre</string>
     <string name="space">space</string>
     <string name="_30">30</string>
     <string name="puntaje">Tu puntaje es: %1$d</string>
+    <string name="tema_oscuro">Tema Oscuro</string>
+    <string name="eliminar_cuenta">Eliminar Cuenta</string>
+    <string name="aumentar_volumen_de_sonidos">Aumentar Volumen de Sonidos</string>
+    <string name="aumentar_tama_o_de_texto">Aumentar Tamaño de Texto</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
+    <string name="configuraci_n">Configuración</string>
+    <string name="gif">Gracias por ayudar a probar la aplicación. Si tienes sugerencias o informes sobre la misma, por favor, completa el cuestionario. ¡Muchas gracias! (toca la imagen) :D</string>
+    <string name="gift2">TODO</string>
+    <string name="soporte">Soporte</string>
+    <string name="IMAGEN">TODO</string>
+    <string name="atras">TODO</string>
+    <string name="promedio_n_a">Promedio: N/A</string>
+    <string name="actividad_del_usuario_por_d_as_de_la_semana">Tu actividad en la app</string>
+    <string name="continuar">Continuar</string>
+    <string name="logoQuiz">TODO</string>
+    <string name="bienvenido_a_nuestra_prueba_de_conocimientos_en_los_pr_ximos_minutos_te_presentaremos_una_serie_de_15_preguntas_para_evaluar_tu_comprenci_n_lectora_en_diversos_temas_antes_de_comenzar_aseg_rate_de_estar_en_un_lugar_tranquilo_y_sin_distracciones_para_poder_responder_con_tranquilidad_una_vez_que_est_s_listo_para_comenzar_simplemente_despl_zate_hacia_abajo_y_encontrar_s_el_bot_n_de_quot_continuar_quot_en_la_parte_inferior_de_la_p_gina_haz_clic_en_ese_bot_n_cuando_te_sientas_preparado_para_empezar_la_prueba">¡Bienvenido a nuestra prueba de conocimientos! En los próximos minutos, te presentaremos una serie de 10 preguntas para evaluar tu comprención lectora en diversos temas. Antes de comenzar, asegúrate de estar en un lugar tranquilo y sin distracciones para poder responder con tranquilidad. Una vez que estés listo para comenzar, simplemente desplázate hacia abajo y encontrarás el botón de \"Continuar\" en la parte inferior de la página. Haz clic en ese botón cuando te sientas preparado para empezar la prueba.</string>
+    <string name="informaci_n">Información</string>
+    <string name="rankin">Rankin</string>
+
 </resources>

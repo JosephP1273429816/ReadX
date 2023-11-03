@@ -1,14 +1,733 @@
 [
   {
-    "question": "¿Cuál es la capital de España?",
+    "question": "A juzgar por su estilo, tema y estructura, ¿en cuál de los siguientes contextos estaría inscrito más\napropiadamente el pasaje anterior?",
     "text": "El primer gran filósofo del siglo diecisiete (si exceptuamos a Bacon y Galileo) fue Descartes, y si alguna\nvez se dijo de alguien que estuvo a punto de ser asesinado habrá que decirlo de él.\nLa historia es la siguiente, según la cuenta Baillet en su Vie de M. Descartes, tomo I, páginas 102-103.\nEn 1621, Descartes, que tenía unos veintiséis años, se hallaba como siempre viajando (pues era\ninquieto como una hiena) y, al llegar al Elba, tomó una embarcación para Friezland oriental. Nadie se\nha enterado nunca de lo que podía buscar en Friezland oriental y tal vez él se hiciera la misma pregunta,\nya que, al llegar a Embden, decidió dirigirse al instante a Friezland occidental, y siendo demasiado\nimpaciente para tolerar cualquier demora, alquiló una barca y contrató a unos cuantos marineros.\nTan pronto habían salido al mar cuando hizo un agradable descubrimiento, al saber que se había\nencerrado en una guarida de asesinos. Se dio cuenta, dice M. Baillet, de que su tripulación estaba\nformada por criminales, no aficionados, señores, como lo somos nosotros, sino profesionales cuya\nmáxima ambición, por el momento, era degollarlo.\nLa historia es demasiado amena para resumirla y a continuación la traduzco cuidadosamente del original francés de la biografía: “M. Descartes no tenía más compañía que su criado, con quien conversaba en francés. Los marineros, creyendo que se trataba de un comerciante y no de un caballero,\npensaron que llevaría dinero consigo y pronto llegaron a una decisión que no era en modo alguno\nventajosa para su bolsa. Entre los ladrones de mar y los ladrones de bosques, hay esta diferencia,\nque los últimos pueden perdonar la vida a sus víctimas sin peligro para ellos, en tanto que si los otros\nllevan a sus pasajeros a la costa, corren grave peligro de ir a parar a la cárcel. La tripulación de M.\nDescartes tomó sus precauciones para evitar todo riesgo de esta naturaleza. Lo suponían un extranjero venido de lejos, sin relaciones en el país, y se dijeron que nadie se daría el trabajo de averiguar\nsu paradero cuando desapareciera”. Piensen, señores, en estos perros de Friezland que hablan de un\nfilósofo como si fuese una barrica de ron consignada a un barco de carga. “Notaron que era de carácter manso y paciente y, juzgándolo por la gentileza de su comportamiento y la cortesía de su trato,\nse imaginaron que debía ser un joven inexperimentado, sin situación ni raíces en la vida, y concluyeron que les sería fácil quitarle la vida. No tuvieron empacho en discutir la cuestión en presencia suya\npues no creían que entendiese otro idioma además del que empleaba para hablar con su criado; como\nresultado de sus deliberaciones decidieron asesinarlo, arrojar sus restos al mar y dividirse el botín”.\nPerdonen que me ría, caballeros, pero a decir verdad me río siempre que recuerdo esta historia, en la que hay dos cosas que me parecen muy cómicas. Una de ellas es el pánico de Descartes, a quien\nse le debieron poner los pelos de punta, ante el pequeño drama de su propia muerte, funeral, herencia\ny administración de bienes. Pero hay otro aspecto que me parece aún más gracioso, y es que si\nlos mastines de Friezland hubieran estado “a la altura”, no tendríamos filosofía cartesiana.",
-    "answers": ["Madrid", "Barcelona", "Sevilla"],
+    "answers": [
+      "En una revista académica, como parte de un artículo sobre los orígenes y la importancia\nde la filosofía cartesiana.",
+      "En un discurso ofrecido a un grupo conformado por aficionados al estudio de asesinatos\nen la historia de la filosofía.",
+      "En un seminario dirigido a historiadores especialistas en la vida de los personajes insignes\ndel siglo XX"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "El autor introduce la cita de López Michelsen con el fin de presentar la opinión de un conocedor\ndel vallenato y",
+    "text": "Uno de los escenarios donde empezó a codearse el vallenato con la música que escuchaba y bailaba\nla burguesía –valses, mazurcas, canciones napolitanas– fue el de las colitas. Era este el nombre que\nrecibían las ‘colas’ o finales de fiesta de la clase adinerada: bodas, bautizos, cumpleaños, festejos\nreligiosos… Durante el sarao, mientras los señores se divertían con la música europea que interpretaba una precaria orquesta provinciana, los trabajadores pasaban la fiesta en la cocina y los galpones a punta de acordeón, guacharaca y caja. Despachada la orquesta, los de atrás eran invitados a\npasar adelante, y patrones y vaqueros se sentaban a tomar y cantar juntos. Se ha discutido acerca\ndel papel que cumplieron las colitas en esta historia. Algunos dicen que estos remates de fiesta fueron el pabellón de maternidad del vallenato, pues combinaron ritmos europeos y nativos: entre ambos dieron a luz los aires vallenatos. “Las colitas son el ancestro directo del vallenato moderno”,\nafirma López Michelsen.\nPero parece más acertado pensar que las colitas no ayudaron a formar el género, sino a divulgarlo.\nPara empezar, esta clase de fiestas improvisadas no se conocieron en toda la región, sino tan sólo\nen la zona del Valle de Upar. En El Paso no hubo colitas. En muchos lugares del río tampoco. Y, por\notra parte, los historiadores indican que las colitas surgieron a comienzos del siglo XX, cuando ya\nel vallenato había empezado a coger ritmo con el trío del instrumental clásico. En cambio, las piquerias y retos sí constituyeron desde el principio uno de los más efectivos moldes de creación,\npropagación y desarrollo del vallenato. La leyenda de Francisco el Hombre habla de su desafío con\nel diablo, a quien únicamente logra derrotar cuando le canta el Credo al revés. Los grandes acordeoneros viajaban durante días para acudir a piquerias, concertadas de antemano o a través de recados, como lo atestigua ‘La gota fría’: “Acordate Moralitos de aquel día / que estuviste en\nUrumita/y no quisiste hacer parada”.",
+    "answers": [
+      "reforzar la tesis principal del texto, según la cual las colitas fueron divulgadoras del género",
+      "egitimar la tesis principal del texto, según la cual las colitas originaron el vallenato moderno",
+      "señalar una posición discutible sobre el papel que desempeñaron las colitas en el origen\ndel género"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "El autor cita el verso de La gota fría para apoyar la idea de que los acordeoneros viajaban para\nasistir a diferentes piquerias, porque en este se hace referencia a",
+    "text": "Uno de los escenarios donde empezó a codearse el vallenato con la música que escuchaba y bailaba\nla burguesía –valses, mazurcas, canciones napolitanas– fue el de las colitas. Era este el nombre que\nrecibían las ‘colas’ o finales de fiesta de la clase adinerada: bodas, bautizos, cumpleaños, festejos\nreligiosos… Durante el sarao, mientras los señores se divertían con la música europea que interpretaba una precaria orquesta provinciana, los trabajadores pasaban la fiesta en la cocina y los galpones a punta de acordeón, guacharaca y caja. Despachada la orquesta, los de atrás eran invitados a\npasar adelante, y patrones y vaqueros se sentaban a tomar y cantar juntos. Se ha discutido acerca\ndel papel que cumplieron las colitas en esta historia. Algunos dicen que estos remates de fiesta fueron el pabellón de maternidad del vallenato, pues combinaron ritmos europeos y nativos: entre ambos dieron a luz los aires vallenatos. “Las colitas son el ancestro directo del vallenato moderno”,\nafirma López Michelsen.\nPero parece más acertado pensar que las colitas no ayudaron a formar el género, sino a divulgarlo.\nPara empezar, esta clase de fiestas improvisadas no se conocieron en toda la región, sino tan sólo\nen la zona del Valle de Upar. En El Paso no hubo colitas. En muchos lugares del río tampoco. Y, por\notra parte, los historiadores indican que las colitas surgieron a comienzos del siglo XX, cuando ya\nel vallenato había empezado a coger ritmo con el trío del instrumental clásico. En cambio, las piquerias y retos sí constituyeron desde el principio uno de los más efectivos moldes de creación,\npropagación y desarrollo del vallenato. La leyenda de Francisco el Hombre habla de su desafío con\nel diablo, a quien únicamente logra derrotar cuando le canta el Credo al revés. Los grandes acordeoneros viajaban durante días para acudir a piquerias, concertadas de antemano o a través de recados, como lo atestigua ‘La gota fría’: “Acordate Moralitos de aquel día / que estuviste en\nUrumita/y no quisiste hacer parada”.",
+    "answer": [
+      "un acordeonero que se encontraba de paso por un pueblo",
+      "un acordeonero que cantaba colitas, llamado Lorenzo Morales",
+      "Urumita, un pueblo al cual iban los acordeoneros."
+    ],
     "correctAnswer": 0
   },
   {
-    "question": "¿En qué año se fundó Google?",
-    "text": "Pregunta de tecnología",
-    "answers": ["1998", "2000", "2002"],
+    "question": "¿Cuál de las siguientes opciones describe mejor la relación entre el contenido del texto y el título\nde la obra de la que se extrajo?",
+    "text": "El conocimiento no consiste en una serie de teorías autoconsistentes que tiende a converger en\nuna perspectiva ideal; no consiste en un acercamiento gradual hacia la verdad. Por el contrario, el\nconocimiento es un océano, siempre en aumento, de alternativas incompatibles entre sí (y tal vez\ninconmensurables); toda teoría particular, todo cuento de hadas, todo mito, forman parte del conjunto que obliga al resto a una articulación mayor, y todos ellos contribuyen, por medio de este\nproceso competitivo, al desarrollo de nuestro conocimiento. No hay nada establecido para siempre, ningún punto de vista puede quedar omitido en una explicación comprehensiva (...). Expertos\ny profanos, profesionales y diletantes, forjadores de utopías y mentirosos, todos ellos están invitados a participar en el debate y a contribuir al enriquecimiento de la cultura.\nLa tarea del científico no ha de ser por más tiempo “la búsqueda de la verdad”, o “la glorificación de\ndios”, o “la sistematización de las observaciones” o “el perfeccionamiento de predicciones”. Todas\nestas cosas no son más que efectos marginales de una actividad a la que se dirige ahora su atención\ny que consiste en “hacer de la causa más débil la causa más fuerte”, como dijo el sofista, “por ello en apoyar el movimiento de conjunto”. ",
+    "answer": [
+      "El texto argumenta a favor de la pluralidad de métodos disponibles para que cada ciencia\nalcance sus verdades.",
+      "El texto crítica concepciones del conocimiento científico, el cual se ha concebido como\nresultado de un método.",
+      "El texto introduce la propuesta de un nuevo método para la investigación científica, diferente\ndel tradicional."
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "En el texto, el autor hace referencia a Rubens para mostrar que",
+    "text": "A mucha gente le gusta ver en los cuadros lo que también le gustaría ver en la realidad. Se trata de\nuna preferencia perfectamente comprensible. A todos nos atrae lo bello en la naturaleza y agradecemos a los artistas que lo recojan en sus obras. Esos mismos artistas no nos censurarían por nuestros\ngustos. Cuando el gran artista flamenco Rubens dibujó a su hijo, estaba orgulloso de sus agradables\nacciones y deseaba que también nosotros admiráramos al pequeño. Pero esta inclinación a los temas\nbonitos y atractivos puede convertirse en nociva si nos conduce a rechazar obras que representan\nasuntos menos agradables. El gran pintor alemán Alberto Durero seguramente dibujó a su madre con\ntanta devoción y cariño como Rubens a su hijo. Su verista estudio de la vejez y la decrepitud puede\nproducirnos tan viva impresión que nos haga apartar los ojos de él y, sin embargo, si reaccionamos\ncontra esta primera aversión, quedaremos recompensados con creces, pues el dibujo de Durero, en\nsu tremenda sinceridad, es una gran obra. En efecto, de pronto descubrimos que la hermosura de un\ncuadro no reside realmente en la belleza de su tema. No sé si los golfillos que el pintor español Murillo\nse complacía en pintar eran estrictamente bellos o no, pero tal como fueron pintados por él, poseen\ndesde luego gran encanto.",
+    "answer": [
+      "a todos nos atrae lo bello y por fortuna el arte lo recoge en la pintura",
+      "el público siempre exige que el artista refleje la realidad en los cuadros",
+      "algunos artistas plasman en sus obras lo que nos gusta ver en la realidad."
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál fue el impacto de la Revolución Industrial en la sociedad del siglo XIX?",
+    "text": "La Revolución Industrial, que comenzó en el siglo XVIII en Gran Bretaña, transformó la sociedad del siglo XIX de manera profunda. La introducción de maquinaria y la mecanización de la producción llevaron a un rápido crecimiento económico, pero también a desafíos sociales. Las condiciones de trabajo en las fábricas eran duras, con largas jornadas laborales y salarios bajos. La urbanización aumentó a medida que las personas se trasladaron a las ciudades en busca de empleo. ¿Cuál fue el impacto de la Revolución Industrial en la sociedad del siglo XIX?",
+    "answer": [
+      "Mejoró las condiciones de trabajo y aumentó los salarios",
+      "Generó desafíos sociales como largas jornadas laborales y salarios bajos",
+      "Redució la urbanización"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la teoría de la evolución de Charles Darwin?",
+    "text": "La teoría de la evolución propuesta por Charles Darwin en su obra 'El Origen de las Especies' ha tenido un profundo impacto en la biología y la comprensión de la diversidad de la vida en la Tierra. Darwin argumentó que las especies evolucionan a lo largo del tiempo a través de un proceso de selección natural, en el que los individuos mejor adaptados a su entorno tienen más probabilidades de sobrevivir y reproducirse. Esta teoría ha revolucionado la biología y la comprensión de la vida en la Tierra. ¿Cuál es la importancia de la teoría de la evolución de Charles Darwin?",
+    "answer": [
+      "No tuvo un impacto significativo en la biología",
+      "Revolucionó la biología al explicar la diversidad de la vida a través de la selección natural",
+      "Demostró que todas las especies permanecen inmutables a lo largo del tiempo"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cómo afecta el cambio climático a los ecosistemas?",
+    "text": "El cambio climático, causado en gran parte por la actividad humana, tiene efectos significativos en los ecosistemas de todo el mundo. A medida que las temperaturas aumentan, los patrones de migración de las especies cambian, lo que puede afectar a los ecosistemas. Además, el aumento del nivel del mar amenaza las zonas costeras y los ecosistemas marinos. La acidificación de los océanos debido al dióxido de carbono también tiene un impacto negativo en la vida marina. ¿Cómo afecta el cambio climático a los ecosistemas?",
+    "answer": [
+      "No tiene impacto en los ecosistemas",
+      "Causa cambios en los patrones de migración de especies y amenaza zonas costeras",
+      "Mejora la salud de los ecosistemas marinos"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál fue el contexto histórico de la Revolución Francesa?",
+    "text": "La Revolución Francesa, que estalló en 1789, fue un evento clave en la historia de Francia y tuvo un profundo impacto en la política y la sociedad europea. Fue precedida por problemas económicos, descontento social y un sistema monárquico autoritario. Los ideales de la Ilustración, como la igualdad y la libertad, influyeron en los revolucionarios. La Revolución Francesa condujo a la caída de la monarquía y al surgimiento de la Primera República Francesa. ¿Cuál fue el contexto histórico de la Revolución Francesa?",
+    "answer": [
+      "Fue un período de prosperidad económica",
+      "Estuvo precedida por problemas económicos y un sistema monárquico autoritario",
+      "Fue causada por la invasión extranjera"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el concepto de relatividad en la física?",
+    "text": "La teoría de la relatividad, desarrollada por Albert Einstein, cambió nuestra comprensión de la física. Esta teoría se divide en dos partes: la relatividad especial y la relatividad general. La relatividad especial se centra en las relaciones entre el espacio y el tiempo, especialmente a velocidades cercanas a la velocidad de la luz. La relatividad general se refiere a la gravedad y cómo afecta al espacio-tiempo. Ambas teorías han sido confirmadas por experimentos y tienen importantes aplicaciones en la física moderna. ¿Cuál es el concepto de relatividad en la física?",
+    "answer": [
+      "La relatividad no tiene importancia en la física",
+      "Es una teoría que cambió nuestra comprensión del espacio, el tiempo y la gravedad",
+      "Se enfoca en la biología y la ecología"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál fue el papel de la Revolución Rusa en la historia del siglo XX?",
+    "text": "La Revolución Rusa de 1917 fue un evento histórico que llevó al derrocamiento del régimen zarista y al establecimiento de un gobierno comunista liderado por los bolcheviques. Esta revolución cambió el curso de la historia del siglo XX, dando lugar a la formación de la Unión Soviética y a un nuevo orden mundial. Tuvo un impacto significativo en la política y la economía global, así como en la expansión del comunismo. ¿Cuál fue el papel de la Revolución Rusa en la historia del siglo XX?",
+    "answer": [
+      "No tuvo impacto en la historia del siglo XX",
+      "Derrocó el régimen zarista y llevó al establecimiento de un gobierno comunista",
+      "Fomentó la monarquía absoluta"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la teoría de la relatividad de Einstein en la actualidad?",
+    "text": "La teoría de la relatividad de Albert Einstein sigue siendo fundamental en la física moderna y tiene aplicaciones en tecnología avanzada. La relatividad especial es la base de la teoría de la relatividad general, que se utiliza en la predicción de eventos astronómicos y en sistemas de posicionamiento global como el GPS. También ha contribuido a nuestra comprensión del cosmos y ha sido confirmada por numerosos experimentos. ¿Cuál es la importancia de la teoría de la relatividad de Einstein en la actualidad?",
+    "answer": [
+      "No tiene relevancia en la física actual",
+      "Es fundamental en la física moderna y tiene aplicaciones en tecnología avanzada",
+      "Se utiliza solo en la biología"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cómo influyeron las ideas de la Ilustración en la Revolución Francesa?",
+    "text": "La Ilustración fue un movimiento intelectual que promovía la razón, la libertad y la igualdad. Sus ideas influyeron en la Revolución Francesa, ya que los revolucionarios adoptaron conceptos como la soberanía popular y los derechos humanos. La Declaración de los Derechos del Hombre y del Ciudadano, un documento importante de la Revolución Francesa, refleja estas influencias. La Ilustración también cuestionó el poder absoluto de los monarcas y promovió la separación de poderes en el gobierno. ¿Cómo influyeron las ideas de la Ilustración en la Revolución Francesa?",
+    "answer": [
+      "No tuvieron influencia en la Revolución Francesa",
+      "Influyeron en conceptos como la soberanía popular y los derechos humanos",
+      "Promovieron el poder absoluto de los monarcas"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la estructura de un átomo y cuáles son sus componentes principales?",
+    "text": "Un átomo está compuesto por un núcleo central que contiene protones y neutrones, y electrones que orbitan alrededor del núcleo en niveles de energía. Los protones tienen una carga positiva, los neutrones son eléctricamente neutros y los electrones tienen una carga negativa. La estructura de un átomo es fundamental en la química y la física y es la base de la materia en el universo. ¿Cuál es la estructura de un átomo y cuáles son sus componentes principales?",
+    "answer": [
+      "Un átomo tiene un núcleo central de electrones y protones",
+      "Un átomo está compuesto por protones, neutrones y electrones",
+      "Los protones son los únicos componentes de un átomo"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Qué influencia tuvo la Revolución Industrial en la urbanización?",
+    "text": "La Revolución Industrial provocó un rápido crecimiento de las ciudades a medida que las personas se mudaban a áreas urbanas en busca de empleo en fábricas y nuevas industrias. Este fenómeno se conoce como urbanización. A medida que las ciudades crecían, se enfrentaron a desafíos como la falta de viviendas adecuadas y la congestión. ¿Qué influencia tuvo la Revolución Industrial en la urbanización?",
+    "answer": [
+      "La Revolución Industrial redujo la urbanización",
+      "La Revolución Industrial no tuvo impacto en la urbanización",
+      "La urbanización aumentó debido a la migración a áreas urbanas en busca de empleo"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuáles son los efectos del cambio climático en los glaciares?",
+    "text": "El cambio climático global ha tenido un impacto devastador en los glaciares de todo el mundo. Las temperaturas en constante aumento han provocado la fusión y el retroceso de los glaciares, contribuyendo al aumento del nivel del mar. Además de afectar a las regiones montañosas y la disponibilidad de agua dulce, esta transformación del paisaje tiene consecuencias importantes para la biodiversidad en las zonas glaciares. La pérdida de hielo también impacta en los ecosistemas y puede tener ramificaciones a nivel global. ¿Cuáles son los efectos del cambio climático en los glaciares?",
+    "answer": [
+      "El cambio climático no afecta a los glaciares",
+      "Fusión y retroceso de los glaciares, aumento del nivel del mar y pérdida de biodiversidad",
+      "Mejora la salud de los glaciares"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál fue el papel de la Ilustración en la Revolución Americana?",
+    "text": "La Ilustración desempeñó un papel fundamental en la Revolución Americana del siglo XVIII. Los ideales ilustrados de igualdad, libertad y derechos individuales influyeron profundamente en los pensadores y líderes revolucionarios de la época. Estos ideales se plasmaron en la Declaración de Independencia de los Estados Unidos y en la Constitución de los Estados Unidos, que establecieron un gobierno basado en la voluntad del pueblo y la protección de los derechos individuales. La Ilustración se convirtió en un faro de esperanza y cambio durante la Revolución Americana, moldeando la fundación de la joven nación. ¿Cuál fue el papel de la Ilustración en la Revolución Americana?",
+    "answer": [
+      "La Ilustración no influyó en la Revolución Americana",
+      "Promovió conceptos de igualdad y derechos individuales que se reflejaron en la Declaración de Independencia y la Constitución",
+      "Apoyó un gobierno autoritario"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la Revolución Industrial en el medio ambiente?",
+    "text": "La Revolución Industrial tuvo un impacto significativo en el medio ambiente. La rápida industrialización llevó a la contaminación del aire y del agua debido a las emisiones de las fábricas y la descarga de desechos industriales. La deforestación fue común para obtener materias primas. Estos problemas ambientales continúan siendo desafíos en la actualidad, lo que subraya la importancia de la sostenibilidad y la protección del medio ambiente. La Revolución Industrial trajo consigo la prosperidad económica, pero también la explotación de los recursos naturales y la degradación del entorno. ¿Cuál es el impacto de la Revolución Industrial en el medio ambiente?",
+    "answer": [
+      "La Revolución Industrial tuvo un impacto positivo en el medio ambiente",
+      "Resultó en la contaminación del aire y del agua, deforestación y pérdida de biodiversidad",
+      "No tuvo ningún impacto en el medio ambiente"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál fue el impacto de la Revolución Industrial en la economía mundial?",
+    "text": "La Revolución Industrial del siglo XIX tuvo un impacto transformador en la economía mundial. La introducción de la maquinaria y la mecanización de la producción llevaron a un rápido crecimiento económico en varias naciones. Esto cambió drásticamente la producción y la distribución de bienes, lo que a su vez influyó en el comercio internacional. Sin embargo, esta transformación también trajo consigo desafíos significativos. Las duras condiciones de trabajo en las fábricas, las largas jornadas laborales y los bajos salarios eran comunes, lo que provocaba la explotación de la mano de obra. A pesar de los desafíos, la Revolución Industrial dejó una huella imborrable en la economía global, dando forma a la economía moderna que conocemos hoy en día.",
+    "answer": [
+      "Generó crecimiento económico, pero también explotación laboral y condiciones de trabajo desafiantes",
+      "La Revolución Industrial redujo la explotación laboral y mejoró las condiciones de trabajo",
+      "La Revolución Industrial no tuvo impacto en la economía mundial"
+    ],
     "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es la importancia de la Revolución Científica en la historia de la ciencia?",
+    "text": "La Revolución Científica de los siglos XVI y XVII marcó un cambio sísmico en la historia de la ciencia. Durante este período, visionarios como Galileo Galilei, Johannes Kepler y Sir Isaac Newton desafiaron las creencias tradicionales y establecieron las bases del método científico. Su enfoque en la observación y la experimentación revolucionó la física y la astronomía, permitiendo un entendimiento más profundo de los fenómenos naturales. La Revolución Científica también influyó en la medicina, la química y la biología, allanando el camino para el progreso científico en las décadas y siglos venideros.",
+    "answer": [
+      "Se centró solo en la astrología",
+      "La Revolución Científica no tuvo un impacto significativo en la ciencia",
+      "Marcó un cambio sísmico al promover la observación y la experimentación como método científico"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Qué impacto tuvo la Segunda Guerra Mundial en el equilibrio de poder en el mundo?",
+    "text": "La Segunda Guerra Mundial, que se libró entre 1939 y 1945, alteró dramáticamente el equilibrio de poder en el ámbito mundial. Después de la guerra, surgieron dos superpotencias: los Estados Unidos y la Unión Soviética. Esta bipolaridad geopolítica desencadenó la Guerra Fría, una lucha política, económica y militar que influyó en gran medida en la política internacional durante décadas. La Guerra Fría también tuvo un impacto significativo en la carrera espacial y en la conformación de la política global.",
+    "answer": [
+      "La Segunda Guerra Mundial no tuvo impacto en el equilibrio de poder",
+      "Restableció el equilibrio de poder preexistente",
+      "Emergieron dos superpotencias, Estados Unidos y la Unión Soviética, dando lugar a la Guerra Fría"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuáles son los efectos del cambio climático en los glaciares?",
+    "text": "El cambio climático global ha tenido un impacto devastador en los glaciares de todo el mundo. Las temperaturas en constante aumento han provocado la fusión y el retroceso de los glaciares, contribuyendo al aumento del nivel del mar. Además de afectar a las regiones montañosas y la disponibilidad de agua dulce, esta transformación del paisaje tiene consecuencias importantes para la biodiversidad en las zonas glaciares. La pérdida de hielo también impacta en los ecosistemas y puede tener ramificaciones a nivel global.",
+    "answer": [
+      "Mejora la salud de los glaciares",
+      "El cambio climático no afecta a los glaciares",
+      "Fusión y retroceso de los glaciares, aumento del nivel del mar y pérdida de biodiversidad"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál fue el papel de la Ilustración en la Revolución Americana?",
+    "text": "La Ilustración desempeñó un papel fundamental en la Revolución Americana del siglo XVIII. Los ideales ilustrados de igualdad, libertad y derechos individuales influyeron profundamente en los pensadores y líderes revolucionarios de la época. Estos ideales se plasmaron en la Declaración de Independencia de los Estados Unidos y en la Constitución de los Estados Unidos, que establecieron un gobierno basado en la voluntad del pueblo y la protección de los derechos individuales. La Ilustración se convirtió en un faro de esperanza y cambio durante la Revolución Americana, moldeando la fundación de la joven nación.",
+    "answer": [
+      "Apoyó un gobierno autoritario",
+      "La Ilustración no influyó en la Revolución Americana",
+      "Promovió conceptos de igualdad y derechos individuales que se reflejaron en la Declaración de Independencia y la Constitución"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es el impacto de la Revolución Industrial en el medio ambiente?",
+    "text": "La Revolución Industrial tuvo un impacto significativo en el medio ambiente. La rápida industrialización llevó a la contaminación del aire y del agua debido a las emisiones de las fábricas y la descarga de desechos industriales. La deforestación fue común para obtener materias primas. Estos problemas ambientales continúan siendo desafíos en la actualidad, lo que subraya la importancia de la sostenibilidad y la protección del medio ambiente. La Revolución Industrial trajo consigo la prosperidad económica, pero también la explotación de los recursos naturales y la degradación del entorno.",
+    "answer": [
+      "No tuvo ningún impacto en el medio ambiente",
+      "La Revolución Industrial no tuvo impacto en la economía mundial",
+      "Resultó en la contaminación del aire y del agua, deforestación y pérdida de biodiversidad"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la importancia de la Revolución Francesa en la historia política?",
+    "text": "La Revolución Francesa, que tuvo lugar entre 1789 y 1799, tuvo un impacto monumental en la historia política. Fue un período de agitación social y política que condujo al derrocamiento de la monarquía francesa y al surgimiento de la Primera República Francesa. La Revolución Francesa llevó a la abolición de la nobleza, la implementación de la igualdad de derechos y la promulgación de reformas políticas y legales fundamentales. Además, tuvo un impacto en otras partes de Europa y contribuyó a la propagación de ideas revolucionarias. ¿Cuál es la importancia de la Revolución Francesa en la historia política?",
+    "answer": [
+      "La Revolución Francesa no tuvo impacto en la historia política",
+      "Condujo al derrocamiento de la monarquía y al surgimiento de la Primera República Francesa, con reformas políticas significativas",
+      "Reforzó el poder de la nobleza y la monarquía"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuáles son los efectos de la deforestación en la biodiversidad?",
+    "text": "La deforestación, el proceso de tala de árboles en bosques y selvas, tiene graves efectos en la biodiversidad. A medida que los bosques desaparecen, los hábitats de numerosas especies de plantas y animales se ven amenazados o destruidos. Esto puede resultar en la extinción de especies y un desequilibrio en los ecosistemas. La deforestación también contribuye al cambio climático al liberar grandes cantidades de dióxido de carbono en la atmósfera. En resumen, la deforestación tiene un impacto significativo en la biodiversidad y en la salud del planeta. ¿Cuáles son los efectos de la deforestación en la biodiversidad?",
+    "answer": [
+      "La deforestación no afecta a la biodiversidad",
+      "Amenaza y destruye hábitats, contribuye a la extinción de especies y desequilibra ecosistemas",
+      "Mejora la diversidad de especies"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cómo influyó la Revolución Industrial en la urbanización?",
+    "text": "La Revolución Industrial provocó un rápido crecimiento de las ciudades a medida que las personas se mudaban a áreas urbanas en busca de empleo en fábricas y nuevas industrias. Este fenómeno se conoce como urbanización. A medida que las ciudades crecían, se enfrentaron a desafíos como la falta de viviendas adecuadas y la congestión. La Revolución Industrial también influyó en la infraestructura urbana, con la construcción de ferrocarriles y carreteras. La urbanización cambió drásticamente la vida de las personas y sigue siendo un fenómeno importante en la actualidad. ¿Cómo influyó la Revolución Industrial en la urbanización?",
+    "answer": [
+      "La Revolución Industrial redujo la urbanización",
+      "La Revolución Industrial no tuvo impacto en la urbanización",
+      "Aumentó la urbanización a medida que las personas se mudaban a ciudades en busca de empleo en fábricas"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la importancia de la Revolución Industrial en la historia económica?",
+    "text": "La Revolución Industrial, que se desarrolló en el siglo XIX, marcó un punto de inflexión en la historia económica. La introducción de la maquinaria, la mecanización de la producción y la industrialización transformaron la forma en que se producían los bienes. Esto llevó a un rápido crecimiento económico en varias naciones. Además, la Revolución Industrial influyó en la urbanización, la organización del trabajo y el comercio internacional. A pesar de los avances económicos, también trajo consigo desafíos como la explotación laboral y la degradación del medio ambiente. ¿Cuál es la importancia de la Revolución Industrial en la historia económica?",
+    "answer": [
+      "La Revolución Industrial no tuvo importancia en la historia económica",
+      "Marcó un punto de inflexión al impulsar el crecimiento económico y cambiar la forma en que se producían los bienes",
+      "Resultó en la disminución de la urbanización y del comercio internacional"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la Revolución Tecnológica en la sociedad actual?",
+    "text": "La Revolución Tecnológica, impulsada por avances en la informática y la conectividad global, ha tenido un profundo impacto en la sociedad actual. Ha cambiado la forma en que trabajamos, nos comunicamos y vivimos nuestras vidas diarias. La tecnología ha permitido la automatización de tareas, el acceso a la información en tiempo real y la interconexión global. Sin embargo, también ha planteado preocupaciones sobre la privacidad en línea y la dependencia de la tecnología. La sociedad actual se ve influenciada en gran medida por estos avances tecnológicos. ¿Cuál es el impacto de la Revolución Tecnológica en la sociedad actual?",
+    "answer": [
+      "La Revolución Tecnológica no ha tenido ningún impacto en la sociedad actual",
+      "Ha cambiado la forma en que trabajamos, nos comunicamos y vivimos nuestras vidas diarias, pero ha tenido un impacto negativo en la privacidad",
+      "No ha cambiado la forma en que vivimos nuestras vidas diarias"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuáles son los efectos de la deforestación en el cambio climático?",
+    "text": "La deforestación, que implica la tala de árboles en bosques y selvas, tiene efectos significativos en el cambio climático. Los árboles desempeñan un papel crucial en la absorción del dióxido de carbono (CO2) de la atmósfera, lo que ayuda a regular el clima. La deforestación contribuye a la liberación de CO2, lo que aumenta la concentración de gases de efecto invernadero y provoca el calentamiento global. Este fenómeno tiene ramificaciones importantes en términos de eventos climáticos extremos y el aumento del nivel del mar. ¿Cuáles son los efectos de la deforestación en el cambio climático?",
+    "answer": [
+      "La deforestación no tiene efectos en el cambio climático",
+      "Contribuye a la liberación de CO2 y al calentamiento global, lo que afecta el clima y el nivel del mar",
+      "Mejora la regulación del clima"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la Revolución Industrial en la distribución de la riqueza?",
+    "text": "La Revolución Industrial tuvo un impacto profundo en la distribución de la riqueza. Aunque generó un crecimiento económico significativo en algunas regiones, también exacerbó la desigualdad. Los beneficios de la industrialización no se distribuyeron de manera equitativa, y muchas personas trabajadoras enfrentaron condiciones laborales precarias y bajos salarios. Esto llevó a una brecha económica entre los ricos y los pobres. La Revolución Industrial cambió la estructura económica y social de muchas sociedades, y su legado continúa afectando la distribución de la riqueza en la actualidad. ¿Cuál es el impacto de la Revolución Industrial en la distribución de la riqueza?",
+    "answer": [
+      "La Revolución Industrial mejoró la distribución de la riqueza",
+      "No tuvo impacto en la distribución de la riqueza",
+      "Exacerbó la desigualdad económica al favorecer a ciertos grupos"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es el papel de la inteligencia artificial en la exploración espacial?",
+    "text": "La inteligencia artificial (IA) desempeña un papel fundamental en la exploración espacial. Las misiones espaciales, como las enviadas a Marte, dependen de sistemas de IA para la toma de decisiones autónoma y la navegación. La IA se utiliza para analizar grandes cantidades de datos recopilados en el espacio y para mejorar la eficiencia de las operaciones espaciales. Además, los robots con IA pueden llevar a cabo tareas de exploración en entornos peligrosos, como planetas y lunas. La IA ha ampliado nuestras capacidades en la exploración del espacio y sigue desempeñando un papel crucial en futuras misiones. ¿Cuál es el papel de la inteligencia artificial en la exploración espacial?",
+    "answer": [
+      "La inteligencia artificial no tiene ningún papel en la exploración espacial",
+      "Depende de la IA para la toma de decisiones autónoma, la navegación y la exploración de planetas y lunas",
+      "La IA es perjudicial para la exploración espacial"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuáles son las implicaciones de la inteligencia artificial en la privacidad?",
+    "text": "La creciente adopción de la inteligencia artificial plantea preocupaciones sobre la privacidad de los individuos. Los sistemas de IA pueden recopilar y analizar grandes cantidades de datos personales, lo que plantea cuestiones sobre la privacidad y la seguridad de la información. Además, la automatización de tareas a menudo implica la recopilación de datos de comportamiento. Para abordar estas preocupaciones, se deben establecer regulaciones y salvaguardias para proteger la privacidad de las personas en un mundo cada vez más impulsado por la IA. ¿Cuáles son las implicaciones de la inteligencia artificial en la privacidad?",
+    "answer": [
+      "La inteligencia artificial no tiene implicaciones en la privacidad",
+      "Plantea preocupaciones sobre la privacidad debido a la recopilación y el análisis de datos personales",
+      "Mejora la privacidad al automatizar tareas"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la educación en la sociedad?",
+    "text": "La educación desempeña un papel fundamental en la sociedad al proporcionar conocimientos, habilidades y oportunidades a las personas. La educación no solo fomenta el desarrollo individual, sino que también contribuye al progreso de la sociedad en su conjunto. Una sociedad educada tiende a ser más innovadora, productiva y justa. La educación promueve la igualdad de oportunidades y la movilidad social al permitir que las personas accedan a empleos mejor remunerados y alcancen sus metas personales. Además, la educación también fomenta la ciudadanía informada y activa. ¿Cuál es la importancia de la educación en la sociedad?",
+    "answer": [
+      "La educación no tiene importancia en la sociedad",
+      "Proporciona conocimientos, habilidades y oportunidades, y fomenta la igualdad de oportunidades y la movilidad social",
+      "Dificulta el progreso de la sociedad"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la industria automotriz?",
+    "text": "La inteligencia artificial ha transformado la industria automotriz al permitir la creación de vehículos autónomos y sistemas de asistencia al conductor.",
+    "answer": [
+      "La inteligencia artificial no ha tenido impacto en la industria automotriz",
+      "Se utiliza en sistemas de asistencia al conductor y en la optimización de la cadena de suministro",
+      "Ha creado vehículos voladores completamente autónomos"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es la relación entre la alimentación y la salud mental?",
+    "text": "La alimentación desempeña un papel crucial en la salud mental. Una dieta equilibrada que incluya nutrientes como ácidos grasos omega-3, vitaminas del grupo B y antioxidantes puede mejorar la función cerebral y reducir el riesgo de trastornos mentales.",
+    "answer": [
+      "La alimentación no tiene relación con la salud mental",
+      "Una dieta equilibrada puede mejorar la función cerebral y reducir el riesgo de trastornos mentales",
+      "Solo la cantidad de comida importa, no la calidad"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es el impacto de la tecnología en la comunicación interpersonal?",
+    "text": "La tecnología ha tenido un impacto significativo en la comunicación interpersonal. Si bien ha facilitado la comunicación a larga distancia, como las videollamadas y las redes sociales, también ha planteado desafíos en la comunicación cara a cara.",
+    "answer": [
+      "La tecnología no ha tenido impacto en la comunicación interpersonal",
+      "Facilita la comunicación a larga distancia pero puede afectar la comunicación cara a cara",
+      "Mejora la empatía en las relaciones personales"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la conservación de las abejas?",
+    "text": "La conservación de las abejas es esencial para la seguridad alimentaria y la biodiversidad. Las abejas desempeñan un papel crucial en la polinización de cultivos, lo que contribuye a la producción de alimentos.",
+    "answer": [
+      "La preservación de los ecosistemas acuáticos no tiene importancia",
+      "Proporciona hábitats para la vida marina, regula el clima y purifica el agua",
+      "Contribuye al agotamiento de recursos naturales"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es el papel de las ONG en la protección del medio ambiente?",
+    "text": "Las organizaciones no gubernamentales (ONG) desempeñan un papel crucial en la protección del medio ambiente. Muchas ONG trabajan en la conservación de la naturaleza, la protección de la biodiversidad, la lucha contra la deforestación y la promoción de prácticas sostenibles.",
+    "answer": [
+      "Las ONG no tienen ningún papel en la protección del medio ambiente",
+      "Trabajan en la conservación de la naturaleza, la protección de la biodiversidad y abogan por políticas ambientales",
+      "Solo se centran en la promoción de prácticas ambientales dañinas"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la diversidad cultural en la sociedad?",
+    "text": "La diversidad cultural es fundamental para enriquecer la sociedad. Cada cultura aporta su propia historia, tradiciones, idioma, música y arte, creando una riqueza cultural única.",
+    "answer": [
+      "La diversidad cultural no tiene importancia en la sociedad",
+      "Enriquece la sociedad con diferentes tradiciones, idiomas y perspectivas, fomentando el entendimiento mutuo",
+      "Genera conflictos y divisiones en la sociedad"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la atención médica?",
+    "text": "La inteligencia artificial ha tenido un impacto significativo en la atención médica. Se utiliza en el diagnóstico de enfermedades, la predicción de resultados de tratamientos y la gestión de registros médicos.",
+    "answer": [
+      "La inteligencia artificial no ha tenido impacto en la atención médica",
+      "Se utiliza en el diagnóstico, tratamiento y gestión de registros médicos, mejorando la precisión y eficiencia",
+      "Dificulta el acceso a la atención médica"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la importancia de la preservación de las zonas verdes urbanas?",
+    "text": "La preservación de las zonas verdes urbanas es fundamental para la calidad de vida en las ciudades. Estas áreas proporcionan espacios para la recreación, la relajación y la interacción social.",
+    "answer": [
+      "La preservación de zonas verdes urbanas no tiene importancia",
+      "Proporciona espacios para la recreación, la purificación del aire y la salud mental de los residentes",
+      "No afecta la calidad de vida en las ciudades"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es la importancia de la educación en la sociedad?",
+    "text": "La educación desempeña un papel fundamental en la sociedad al proporcionar conocimientos, habilidades y oportunidades a las personas.",
+    "answer": [
+      "La educación no tiene importancia en la sociedad",
+      "Proporciona conocimientos, habilidades y oportunidades, y fomenta la igualdad de oportunidades y la movilidad social",
+      "Dificulta el progreso de la sociedad"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la exploración espacial?",
+    "text": "La inteligencia artificial desempeña un papel crucial en la exploración espacial y ha demostrado ser un aliado valioso en misiones espaciales.",
+    "answer": [
+      "La inteligencia artificial no tiene ningún papel en la exploración espacial",
+      "Depende de la IA para la toma de decisiones autónoma, la navegación y la exploración de planetas y lunas",
+      "La IA es perjudicial para la exploración espacial"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuáles son las implicaciones de la inteligencia artificial en la privacidad?",
+    "text": "La creciente adopción de la inteligencia artificial plantea preocupaciones sobre la privacidad de los individuos.",
+    "answer": [
+      "La inteligencia artificial no tiene implicaciones en la privacidad",
+      "Plantea preocupaciones sobre la privacidad debido a la recopilación y el análisis de datos personales",
+      "Mejora la privacidad al automatizar tareas"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la exploración espacial?",
+    "text": "La inteligencia artificial desempeña un papel crucial en la exploración espacial y ha demostrado ser un aliado valioso en misiones espaciales. La IA se utiliza para la toma de decisiones autónoma, la navegación precisa y la exploración de planetas y lunas distantes. Su capacidad para procesar grandes cantidades de datos y tomar decisiones en tiempo real ha sido fundamental para el éxito de las misiones espaciales. ¿Cuál es el papel de la inteligencia artificial en la exploración espacial?",
+    "answer": [
+      "La inteligencia artificial no tiene ningún papel en la exploración espacial",
+      "Depende de la IA para la toma de decisiones autónoma, la navegación y la exploración de planetas y lunas",
+      "La IA es perjudicial para la exploración espacial"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es la relación entre la alimentación y la salud mental?",
+    "text": "La relación entre la alimentación y la salud mental es compleja. Si bien una dieta equilibrada con nutrientes esenciales puede mejorar la función cerebral y reducir el riesgo de trastornos mentales, la relación es multifacética. Los estudios han demostrado que algunos nutrientes, como los ácidos grasos omega-3 y las vitaminas del grupo B, pueden tener un impacto positivo en la salud mental. Sin embargo, la dieta sola no es una solución universal para los problemas de salud mental. Factores como el estrés, la genética y el entorno también desempeñan un papel importante. ¿Cuál es la relación entre la alimentación y la salud mental?",
+    "answer": [
+      "La alimentación no tiene relación con la salud mental",
+      "Una dieta equilibrada puede mejorar la función cerebral y reducir el riesgo de trastornos mentales",
+      "Solo la cantidad de comida importa, no la calidad"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la tecnología en la comunicación interpersonal?",
+    "text": "El impacto de la tecnología en la comunicación interpersonal es evidente en la era digital. Si bien la tecnología ha facilitado la comunicación a larga distancia a través de las videollamadas y las redes sociales, también ha generado desafíos en la comunicación cara a cara. La creciente dependencia de dispositivos electrónicos ha llevado a la disminución de la interacción directa. Esto plantea preguntas sobre la calidad de las relaciones personales y la empatía en la sociedad moderna. ¿Cuál es el impacto de la tecnología en la comunicación interpersonal?",
+    "answer": [
+      "La tecnología no ha tenido impacto en la comunicación interpersonal",
+      "Facilita la comunicación a larga distancia pero puede afectar la comunicación cara a cara",
+      "Mejora la empatía en las relaciones personales"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la importancia de la conservación de las abejas?",
+    "text": "La importancia de la conservación de las abejas radica en su papel fundamental en la polinización de cultivos y la biodiversidad. Las abejas son responsables de la polinización de muchas plantas, incluyendo alimentos básicos como frutas y verduras. Sin embargo, las poblaciones de abejas se han visto amenazadas por el cambio climático, los pesticidas y la pérdida de hábitats. La desaparición de las abejas podría tener un impacto devastador en la producción de alimentos y la biodiversidad. ¿Cuál es la importancia de la conservación de las abejas?",
+    "answer": [
+      "La preservación de los ecosistemas acuáticos no tiene importancia",
+      "Proporciona hábitats para la vida marina, regula el clima y purifica el agua",
+      "Contribuye al agotamiento de recursos naturales"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es el papel de las ONG en la protección del medio ambiente?",
+    "text": "Las organizaciones no gubernamentales (ONG) desempeñan un papel crucial en la protección del medio ambiente. Muchas ONG trabajan en la conservación de la naturaleza, la protección de la biodiversidad, la lucha contra la deforestación y la promoción de prácticas sostenibles. Su trabajo incluye la sensibilización pública sobre temas ambientales y la promoción de políticas ambientales más estrictas. Las ONG son defensoras de la causa ambiental y contribuyen significativamente a la conservación del medio ambiente. ¿Cuál es el papel de las ONG en la protección del medio ambiente?",
+    "answer": [
+      "Las ONG no tienen ningún papel en la protección del medio ambiente",
+      "Trabajan en la conservación de la naturaleza, la protección de la biodiversidad y abogan por políticas ambientales",
+      "Solo se centran en la promoción de prácticas ambientales dañinas"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la diversidad cultural en la sociedad?",
+    "text": "La importancia de la diversidad cultural en la sociedad radica en la riqueza de perspectivas y experiencias que aporta. Cada cultura contribuye con su propia historia, tradiciones, idioma, música y arte, enriqueciendo el tejido social. La diversidad cultural fomenta el entendimiento entre personas de diferentes orígenes y promueve el respeto mutuo. Además, estimula la creatividad y la innovación al exponer a las personas a diferentes formas de pensar. La apreciación de la diversidad cultural es fundamental para construir una sociedad inclusiva y enriquecedora. ¿Cuál es la importancia de la diversidad cultural en la sociedad?",
+    "answer": [
+      "La diversidad cultural no tiene importancia en la sociedad",
+      "Enriquece la sociedad con diferentes tradiciones, idiomas y perspectivas, fomentando el entendimiento mutuo",
+      "Genera conflictos y divisiones en la sociedad"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la atención médica?",
+    "text": "El impacto de la inteligencia artificial en la atención médica es significativo y multifacético. La IA se utiliza en el diagnóstico de enfermedades, la predicción de resultados de tratamientos y la gestión de registros médicos. Su capacidad para analizar grandes conjuntos de datos ha mejorado la precisión en el diagnóstico y tratamiento de enfermedades. La telemedicina impulsada por la IA ha ampliado el acceso a la atención médica, especialmente en áreas remotas. Sin embargo, la adopción de la IA también plantea desafíos éticos y de privacidad que deben abordarse. ¿Cuál es el impacto de la inteligencia artificial en la atención médica?",
+    "answer": [
+      "La inteligencia artificial no ha tenido impacto en la atención médica",
+      "Se utiliza en el diagnóstico, tratamiento y gestión de registros médicos, mejorando la precisión y eficiencia",
+      "Dificulta el acceso a la atención médica"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la importancia de la preservación de las zonas verdes urbanas?",
+    "text": "La importancia de la preservación de las zonas verdes urbanas radica en su contribución a la calidad de vida en las ciudades. Estas áreas proporcionan espacios para la recreación, la relajación y la interacción social. Además, desempeñan un papel en la purificación del aire y la regulación de la temperatura en entornos urbanos. La preservación de las zonas verdes también protege la biodiversidad y promueve la salud mental de los residentes urbanos. Mantener un equilibrio entre el desarrollo urbano y la preservación de áreas verdes es esencial en el planeamiento de las ciudades. ¿Cuál es la importancia de la preservación de las zonas verdes urbanas?",
+    "answer": [
+      "La preservación de zonas verdes urbanas no tiene importancia",
+      "Proporciona espacios para la recreación, la purificación del aire y la salud mental de los residentes",
+      "No afecta la calidad de vida en las ciudades"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la educación en la sociedad?",
+    "text": "La importancia de la educación en la sociedad es fundamental. La educación proporciona conocimientos, habilidades y oportunidades a las personas, lo que les permite participar plenamente en la sociedad y contribuir al progreso económico y social. Además, la educación fomenta la igualdad de oportunidades y la movilidad social al proporcionar a todos el acceso a la formación y el desarrollo de habilidades. La educación es un pilar en la construcción de una sociedad informada y progresista. ¿Cuál es la importancia de la educación en la sociedad?",
+    "answer": [
+      "La educación no tiene importancia en la sociedad",
+      "Proporciona conocimientos, habilidades y oportunidades, y fomenta la igualdad de oportunidades y la movilidad social",
+      "Dificulta el progreso de la sociedad"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuáles son las implicaciones de la inteligencia artificial en la privacidad?",
+    "text": "Las implicaciones de la inteligencia artificial en la privacidad son un tema de creciente preocupación. Con la creciente recopilación y análisis de datos personales, la privacidad de los individuos se ve amenazada. La IA puede utilizarse para el reconocimiento facial, la monitorización de la actividad en línea y la toma de decisiones basadas en datos personales. Esto plantea cuestiones éticas y de privacidad que requieren regulación y protección adecuada. Al mismo tiempo, la IA también puede mejorar la privacidad al automatizar tareas y garantizar la seguridad de los datos. ¿Cuáles son las implicaciones de la inteligencia artificial en la privacidad?",
+    "answer": [
+      "La inteligencia artificial no tiene implicaciones en la privacidad",
+      "Plantea preocupaciones sobre la privacidad debido a la recopilación y el análisis de datos personales",
+      "Mejora la privacidad al automatizar tareas"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la toma de decisiones empresariales?",
+    "text": "La inteligencia artificial ha revolucionado la toma de decisiones empresariales. Al utilizar grandes conjuntos de datos y algoritmos avanzados, las empresas pueden tomar decisiones más informadas y estratégicas. La IA se aplica en la previsión de demanda, la gestión de inventarios y la personalización de experiencias del cliente. Aunque la IA ofrece ventajas significativas, también plantea desafíos éticos y de privacidad en la recopilación y uso de datos. ¿Cuál es el impacto de la inteligencia artificial en la toma de decisiones empresariales?",
+    "answer": [
+      "La inteligencia artificial no ha tenido impacto en la toma de decisiones empresariales",
+      "Facilita la toma de decisiones informadas y estratégicas, pero plantea desafíos éticos y de privacidad",
+      "Dificulta la toma de decisiones en las empresas"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la relación entre la inteligencia emocional y el éxito profesional?",
+    "text": "La inteligencia emocional desempeña un papel esencial en el éxito profesional. Comprender y gestionar las propias emociones, así como las de los demás, es crucial en entornos laborales. La inteligencia emocional contribuye a las habilidades de liderazgo, la resolución de conflictos y la empatía, que son valiosas en el mundo laboral. Las personas con alta inteligencia emocional suelen ser más efectivas en sus roles profesionales y tienen relaciones laborales más saludables. ¿Cuál es la relación entre la inteligencia emocional y el éxito profesional?",
+    "answer": [
+      "La inteligencia emocional no tiene relación con el éxito profesional",
+      "Contribuye a habilidades de liderazgo, resolución de conflictos y empatía, mejorando el desempeño laboral",
+      "Dificulta el éxito en el trabajo"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la ética en la inteligencia artificial?",
+    "text": "La ética desempeña un papel fundamental en el desarrollo y uso de la inteligencia artificial. La IA plantea desafíos éticos relacionados con la toma de decisiones autónoma, la privacidad de los datos y la discriminación algorítmica. Es esencial establecer marcos éticos y regulaciones para garantizar que la IA se utilice de manera justa y responsable. La ética en la IA también incluye la transparencia en los algoritmos y la rendición de cuentas. ¿Cuál es la importancia de la ética en la inteligencia artificial?",
+    "answer": [
+      "La ética no tiene importancia en la inteligencia artificial",
+      "Es fundamental para garantizar el uso justo y responsable de la IA, incluyendo la transparencia y la rendición de cuentas",
+      "Hace que la IA sea inaccesible para la mayoría de las personas"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la educación?",
+    "text": "La inteligencia artificial ha transformado la educación al personalizar la enseñanza y mejorar la retroalimentación para los estudiantes. Los sistemas de IA pueden adaptar el contenido educativo a las necesidades individuales, lo que mejora el aprendizaje. Además, la IA se utiliza en la evaluación de exámenes y la identificación de áreas de mejora. Sin embargo, también plantea preguntas sobre la privacidad de los datos de los estudiantes y la equidad en el acceso a la educación. ¿Cuál es el impacto de la inteligencia artificial en la educación?",
+    "answer": [
+      "La inteligencia artificial no ha tenido impacto en la educación",
+      "Personaliza la enseñanza y mejora la retroalimentación para los estudiantes, pero plantea preocupaciones sobre la privacidad y la equidad",
+      "Dificulta el aprendizaje de los estudiantes"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la importancia de la conservación de los océanos?",
+    "text": "La importancia de la conservación de los océanos radica en su papel fundamental en la regulación del clima y la biodiversidad. Los océanos absorben grandes cantidades de dióxido de carbono y liberan oxígeno, lo que es esencial para la vida en la Tierra. Además, albergan una variedad de vida marina, desde pequeños organismos hasta ballenas gigantes. Sin embargo, la contaminación, la pesca excesiva y el cambio climático amenazan la salud de los océanos. La conservación es esencial para mantener un equilibrio ecológico y garantizar un planeta saludable. ¿Cuál es la importancia de la conservación de los océanos?",
+    "answer": [
+      "La conservación de los océanos no tiene importancia",
+      "Regula el clima y protege la biodiversidad, siendo esencial para la vida en la Tierra",
+      "Contribuye al deterioro ambiental"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la atención médica?",
+    "text": "El impacto de la inteligencia artificial en la atención médica es significativo y multifacético. La IA se utiliza en el diagnóstico de enfermedades, la predicción de resultados de tratamientos y la gestión de registros médicos. Su capacidad para analizar grandes conjuntos de datos ha mejorado la precisión en el diagnóstico y tratamiento de enfermedades. La telemedicina impulsada por la IA ha ampliado el acceso a la atención médica, especialmente en áreas remotas. Sin embargo, la adopción de la IA también plantea desafíos éticos y de privacidad que deben abordarse. ¿Cuál es el impacto de la inteligencia artificial en la atención médica?",
+    "answer": [
+      "La inteligencia artificial no ha tenido impacto en la atención médica",
+      "Se utiliza en el diagnóstico, tratamiento y gestión de registros médicos, mejorando la precisión y eficiencia",
+      "Dificulta el acceso a la atención médica"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es el papel de la inteligencia emocional en las relaciones interpersonales?",
+    "text": "La inteligencia emocional desempeña un papel crucial en las relaciones interpersonales. La capacidad de reconocer y comprender las emociones propias y ajenas, así como la empatía, son fundamentales para establecer conexiones significativas con los demás. La inteligencia emocional también contribuye a la resolución de conflictos y a la comunicación efectiva. Las personas con alta inteligencia emocional tienden a tener relaciones más saludables y satisfactorias. ¿Cuál es el papel de la inteligencia emocional en las relaciones interpersonales?",
+    "answer": [
+      "La inteligencia emocional no tiene importancia en las relaciones interpersonales",
+      "Es fundamental para establecer conexiones significativas, resolver conflictos y comunicarse de manera efectiva",
+      "Dificulta la comunicación con los demás"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la preservación de las selvas tropicales?",
+    "text": "La preservación de las selvas tropicales es esencial para la salud del planeta. Estos bosques albergan una inmensa biodiversidad y desempeñan un papel clave en la regulación del clima global. Además, absorben dióxido de carbono, lo que ayuda a mitigar el cambio climático. Las selvas tropicales también son hogar de comunidades indígenas y proporcionan recursos esenciales para la humanidad. La deforestación y la explotación amenazan estos ecosistemas críticos. ¿Cuál es la importancia de la preservación de las selvas tropicales?",
+    "answer": [
+      "La preservación de las selvas tropicales no tiene importancia",
+      "Regulan el clima, albergan biodiversidad y proporcionan recursos esenciales, contribuyendo a la salud del planeta",
+      "No afecta la biodiversidad ni el clima global"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es la relación entre la tecnología y el cambio social?",
+    "text": "La relación entre la tecnología y el cambio social es profunda. La tecnología ha transformado la forma en que las personas se comunican, trabajan y acceden a la información. Ha impulsado avances en campos como la medicina, la educación y la movilidad. Sin embargo, también ha planteado desafíos, como la brecha digital y la privacidad en línea. El impacto de la tecnología en la sociedad es un tema de debate constante y requiere una consideración cuidadosa de sus implicaciones. ¿Cuál es la relación entre la tecnología y el cambio social?",
+    "answer": [
+      "La tecnología no tiene relación con el cambio social",
+      "Ha transformado la forma en que las personas se comunican y trabajan, pero también ha planteado desafíos",
+      "Solo ha causado problemas en la sociedad"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la relación entre la inteligencia artificial y la automatización de trabajos?",
+    "text": "La inteligencia artificial está estrechamente relacionada con la automatización de trabajos. La IA permite que las máquinas realicen tareas que antes requerían intervención humana, lo que ha llevado a la automatización de diversos trabajos. Aunque esto puede aumentar la eficiencia y reducir costos, también plantea desafíos en términos de pérdida de empleos y la necesidad de adquirir nuevas habilidades. La relación entre la IA y la automatización es un tema importante en la economía y el futuro del trabajo. ¿Cuál es la relación entre la inteligencia artificial y la automatización de trabajos?",
+    "answer": [
+      "La inteligencia artificial no está relacionada con la automatización de trabajos",
+      "La IA permite la automatización de tareas y puede afectar la disponibilidad de empleos",
+      "La IA crea más empleos que los que automatiza"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la conservación de los humedales?",
+    "text": "La importancia de la conservación de los humedales radica en su función ecológica vital. Los humedales actúan como filtros naturales, purificando el agua y proporcionando hábitats para una variedad de vida silvestre, incluyendo aves migratorias. Además, desempeñan un papel en la mitigación de inundaciones y la estabilización de las costas. Sin embargo, los humedales están amenazados por la urbanización y la contaminación. Su conservación es esencial para mantener la salud de los ecosistemas y el bienestar humano. ¿Cuál es la importancia de la conservación de los humedales?",
+    "answer": [
+      "La conservación de los humedales no tiene importancia",
+      "Purifican el agua, proporcionan hábitats para la vida silvestre y ayudan a prevenir inundaciones",
+      "No afecta los ecosistemas ni el bienestar humano"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la ciberseguridad?",
+    "text": "La inteligencia artificial ha tenido un impacto significativo en la ciberseguridad. Se utiliza para detectar y prevenir amenazas cibernéticas al analizar patrones de tráfico y comportamiento en línea. La IA también puede identificar vulnerabilidades en sistemas de seguridad y responder a ataques en tiempo real. Sin embargo, los ciberdelincuentes también pueden utilizar la IA para llevar a cabo ataques más sofisticados. La relación entre la IA y la ciberseguridad es una constante evolución en la lucha contra amenazas en línea. ¿Cuál es el impacto de la inteligencia artificial en la ciberseguridad?",
+    "answer": [
+      "La inteligencia artificial no ha tenido impacto en la ciberseguridad",
+      "Se utiliza para detectar amenazas cibernéticas y fortalecer la seguridad en línea, pero también puede ser utilizada por ciberdelincuentes",
+      "Dificulta la detección de amenazas en línea"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la relación entre la ética y la inteligencia artificial en la medicina?",
+    "text": "La relación entre la ética y la inteligencia artificial en la medicina es esencial. La IA se utiliza en el diagnóstico, el tratamiento y la gestión de datos médicos, lo que plantea preguntas éticas sobre la privacidad de los pacientes, la equidad en la atención médica y la toma de decisiones automatizadas. Los profesionales de la salud deben considerar principios éticos al utilizar la IA para garantizar que se prioricen los mejores intereses de los pacientes. La ética desempeña un papel importante en la integración exitosa de la IA en la medicina. ¿Cuál es la relación entre la ética y la inteligencia artificial en la medicina?",
+    "answer": [
+      "La ética no está relacionada con la inteligencia artificial en la medicina",
+      "Es esencial para garantizar la privacidad de los pacientes y la equidad en la atención médica al utilizar la IA",
+      "La ética dificulta el avance de la medicina"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la toma de decisiones políticas?",
+    "text": "La inteligencia artificial ha comenzado a influir en la toma de decisiones políticas. Los algoritmos de IA pueden analizar grandes conjuntos de datos para proporcionar información que apoye la formulación de políticas. Sin embargo, esto plantea cuestiones sobre la transparencia y la posibilidad de sesgos en las decisiones basadas en datos. La relación entre la IA y la política es un campo emergente que requiere una consideración cuidadosa de sus implicaciones éticas y democráticas. ¿Cuál es el impacto de la inteligencia artificial en la toma de decisiones políticas?",
+    "answer": [
+      "La inteligencia artificial no ha tenido impacto en la toma de decisiones políticas",
+      "Puede proporcionar información basada en datos, pero plantea cuestiones sobre la transparencia y los sesgos",
+      "Facilita la toma de decisiones políticas de manera justa"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es la importancia de la conservación de los arrecifes de coral?",
+    "text": "La importancia de la conservación de los arrecifes de coral radica en su riqueza en biodiversidad y su papel en los ecosistemas marinos. Los arrecifes de coral albergan una gran variedad de especies marinas y proporcionan hábitats para peces, tortugas y otros animales marinos. Además, protegen las costas de la erosión y regulan la calidad del agua. Sin embargo, el cambio climático y la contaminación amenazan la salud de los arrecifes de coral en todo el mundo. La conservación es esencial para preservar estos ecosistemas valiosos. ¿Cuál es la importancia de la conservación de los arrecifes de coral?",
+    "answer": [
+      "La conservación de los arrecifes de coral no tiene importancia",
+      "Albergan una gran biodiversidad y protegen las costas, siendo cruciales para los ecosistemas marinos",
+      "No afecta la vida marina ni la calidad del agua"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la creatividad?",
+    "text": "El impacto de la inteligencia artificial en la creatividad es un tema de debate. Si bien la IA puede generar arte, música y escritura, algunos argumentan que carece de la profundidad emocional y la originalidad humana. Otros creen que la IA puede ser una herramienta colaborativa que inspire a los humanos a ser más creativos. La relación entre la IA y la creatividad está en constante evolución a medida que se exploran nuevas posibilidades en campos artísticos y creativos. ¿Cuál es el impacto de la inteligencia artificial en la creatividad?",
+    "answer": [
+      "La inteligencia artificial no tiene impacto en la creatividad",
+      "Puede generar arte, música y escritura, pero plantea preguntas sobre la originalidad",
+      "Inspira a los humanos a ser más creativos y originales"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la importancia de la educación digital en el siglo XXI?",
+    "text": "La importancia de la educación digital en el siglo XXI es fundamental. La tecnología y el acceso a la información en línea han transformado la forma en que las personas aprenden. La educación digital permite la adquisición de habilidades digitales, la flexibilidad en el aprendizaje y el acceso a recursos educativos globales. Sin embargo, también plantea desafíos, como la brecha digital y la necesidad de habilidades críticas para evaluar información en línea. La educación digital es esencial para preparar a las personas para los desafíos del siglo XXI. ¿Cuál es la importancia de la educación digital en el siglo XXI?",
+    "answer": [
+      "La educación digital no tiene importancia en el siglo XXI",
+      "Facilita el acceso a recursos educativos globales y la adquisición de habilidades digitales, pero plantea desafíos",
+      "No afecta la forma en que las personas aprenden en la era digital"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el impacto de la inteligencia artificial en la música?",
+    "text": "La inteligencia artificial ha tenido un impacto significativo en la música. La IA se utiliza para componer música, generar letras y crear sonidos únicos. Algunos argumentan que la IA puede ampliar la creatividad en la música, mientras que otros cuestionan su autenticidad artística. La relación entre la IA y la música es un tema en constante evolución en la industria musical. ¿Cuál es el impacto de la inteligencia artificial en la música?",
+    "answer": [
+      "La inteligencia artificial no ha tenido impacto en la música",
+      "Se utiliza para componer música, generar letras y crear sonidos únicos, lo que plantea preguntas sobre la autenticidad artística",
+      "Facilita la creación musical humana"
+    ],
+    "correctAnswer": 1
   }
+
 ]

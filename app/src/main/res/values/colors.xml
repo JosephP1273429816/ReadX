@@ -7,11 +7,12 @@
     <color name="transp">#00FFFFFF</color>
     <color name="bar">#0C5B54</color>
     <color name="button_normal">#008577</color>
-    <color name="correctAnswerColor">#FF00FF00</color>
-    <color name="incorrectAnswerColor">#FF0000</color>
-    <color name="correct_button_pressed">#FF00FF00</color>
-    <color name="correct_button_normal">#FF00FF00</color>
-    <color name="wrong_button_pressed">#FFFF0000</color>
-    <color name="wrong_button_normal">#FFFF0000</color>
+    <color name="correct_button_pressed">#5500FF00</color>
+    <color name="correct_button_normal">#5500FF00</color>
+    <color name="wrong_button_pressed">#55FF0000</color>
+    <color name="wrong_button_normal">#55FF0000</color>
+    <color name="colorPrimaryDark">#202732</color>
+    <color name="colorIconText">#008577</color>
+    <color name="boton">#1B1F28</color>
 
 </resources>

@@ -1,6 +1,5 @@
 package com.joseph.readxapp.view
 
-import com.joseph.readxapp.data.Question
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -9,11 +8,13 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.joseph.readxapp.R
-import org.json.JSONArray
-import org.json.JSONObject
-import java.io.InputStream
+import com.joseph.readxapp.data.Question
+import com.joseph.readxapp.data.QuestionData
+import java.util.*
+import com.joseph.readxapp.data.TimeTracker
 
 class QuizActivity : AppCompatActivity() {
+    private val timeTracker: TimeTracker by lazy { TimeTracker.getInstance(this) }
     private lateinit var questionTextView: TextView
     private lateinit var textTextView: TextView
     private lateinit var answerButton1: Button
@@ -30,6 +31,13 @@ class QuizActivity : AppCompatActivity() {
     private val countdownInterval: Long = 1000
     private val totalMilliseconds: Long = 60000
 
+    private val random = Random()
+    private val selectedQuestions: MutableList<Question> = mutableListOf()
+    private var isQuestionAnswered = false
+
+    private var startTime: Long = 0
+    private var uid: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quiz)
@@ -42,21 +50,27 @@ class QuizActivity : AppCompatActivity() {
         timerProgressBar = findViewById(R.id.timerProgressBar)
         timerTextView = findViewById(R.id.timerTextView)
 
-        // Carga las preguntas desde el archivo JSON
-        questionList = loadQuestionsFromJson()
+        // Obtiene todas las preguntas del array QuestionData
+        questionList = QuestionData.questionList
 
         if (questionList.isNotEmpty()) {
-            displayQuestion(questionList[currentQuestionIndex])
+            // Selecciona 10 preguntas al azar
+            selectRandomQuestions(10)
+
+            // Comienza mostrando la primera pregunta
+            displayQuestion(selectedQuestions[currentQuestionIndex])
         } else {
             // No se pudieron cargar las preguntas
         }
+
+        startTime = System.currentTimeMillis()
     }
 
     private fun displayQuestion(question: Question) {
         // Restablece los colores de los botones a la normalidad
-        answerButton1.setBackgroundColor(resources.getColor(R.color.button_normal))
-        answerButton2.setBackgroundColor(resources.getColor(R.color.button_normal))
-        answerButton3.setBackgroundColor(resources.getColor(R.color.button_normal))
+        answerButton1.setBackgroundResource(R.drawable.botton)
+        answerButton2.setBackgroundResource(R.drawable.botton)
+        answerButton3.setBackgroundResource(R.drawable.botton)
 
         questionTextView.text = question.question
         textTextView.text = question.text
@@ -66,6 +80,11 @@ class QuizActivity : AppCompatActivity() {
         answerButton2.text = answers[1]
         answerButton3.text = answers[2]
 
+        // Habilita los botones
+        answerButton1.isEnabled = true
+        answerButton2.isEnabled = true
+        answerButton3.isEnabled = true
+
         answerButton1.setOnClickListener { checkAnswer(0, question.correctAnswer) }
         answerButton2.setOnClickListener { checkAnswer(1, question.correctAnswer) }
         answerButton3.setOnClickListener { checkAnswer(2, question.correctAnswer) }
@@ -74,45 +93,59 @@ class QuizActivity : AppCompatActivity() {
     }
 
     private fun checkAnswer(selectedAnswerIndex: Int, correctAnswerIndex: Int) {
-        countDownTimer.cancel() // Detener el contador cuando se selecciona una respuesta
+        countDownTimer.cancel()
+
+        // Deshabilita los botones después de responder
+        answerButton1.isEnabled = false
+        answerButton2.isEnabled = false
+        answerButton3.isEnabled = false
+
+        isQuestionAnswered = true  // Marca la pregunta como respondida
 
         if (selectedAnswerIndex == correctAnswerIndex) {
-            // Respuesta correcta
             score++
-            answerButton1.setBackgroundColor(resources.getColor(R.color.correct_button_pressed))
-            answerButton2.setBackgroundColor(resources.getColor(R.color.correct_button_pressed))
-            answerButton3.setBackgroundColor(resources.getColor(R.color.correct_button_pressed))
-        } else {
-            // Respuesta incorrecta
-            answerButton1.setBackgroundColor(resources.getColor(R.color.wrong_button_pressed))
-            answerButton2.setBackgroundColor(resources.getColor(R.color.wrong_button_pressed))
-            answerButton3.setBackgroundColor(resources.getColor(R.color.wrong_button_pressed))
-            // Mostrar la respuesta correcta
             when (correctAnswerIndex) {
-                0 -> answerButton1.setBackgroundColor(resources.getColor(R.color.correct_button_normal))
-                1 -> answerButton2.setBackgroundColor(resources.getColor(R.color.correct_button_normal))
-                2 -> answerButton3.setBackgroundColor(resources.getColor(R.color.correct_button_normal))
+                0 -> answerButton1.setBackgroundResource(R.drawable.good_pressed)
+                1 -> answerButton2.setBackgroundResource(R.drawable.good_pressed)
+                2 -> answerButton3.setBackgroundResource(R.drawable.good_pressed)
+            }
+        } else {
+            answerButton1.setBackgroundResource(R.drawable.bad_pressed)
+            answerButton2.setBackgroundResource(R.drawable.bad_pressed)
+            answerButton3.setBackgroundResource(R.drawable.bad_pressed)
+
+            when (correctAnswerIndex) {
+                0 -> answerButton1.setBackgroundResource(R.drawable.good_normal)
+                1 -> answerButton2.setBackgroundResource(R.drawable.good_normal)
+                2 -> answerButton3.setBackgroundResource(R.drawable.good_normal)
             }
         }
 
-        // Espera un momento y luego muestra la siguiente pregunta
         val handler = android.os.Handler()
         handler.postDelayed({
             currentQuestionIndex++
-            if (currentQuestionIndex < questionList.size) {
-                displayQuestion(questionList[currentQuestionIndex])
+            isQuestionAnswered = false  // Reinicia el estado de la pregunta
+            if (currentQuestionIndex < selectedQuestions.size) {
+                displayQuestion(selectedQuestions[currentQuestionIndex])
             } else {
                 showFinalScore()
             }
-        }, 2000) // Espera 2 segundos
+        }, 2000)
     }
 
     private fun showFinalScore() {
-        // Crea un Intent para iniciar la actividad de puntuación y pasa el puntaje como extra
+        // Registra el tiempo de uso al terminar la actividad
+        if (uid != null) {
+            val endTime = System.currentTimeMillis()
+            val activityElapsedTime = endTime - startTime
+
+        }
+
         val intent = Intent(this, ScoreActivity::class.java)
-        intent.putExtra("score", score)
+        intent.putExtra("score", score) // Pasa el puntaje actual a la actividad de puntuación
+        score = 0 // Reinicia el puntaje
         startActivity(intent)
-        finish() // Cierra la actividad actual si no deseas volver atrás
+        finish()
     }
 
     private fun startTimer() {
@@ -120,63 +153,70 @@ class QuizActivity : AppCompatActivity() {
             override fun onTick(millisUntilFinished: Long) {
                 val progress = (millisUntilFinished / 1000).toInt()
                 timerProgressBar.progress = progress
-                timerTextView.text = (millisUntilFinished / 1000).toString() // Actualiza el contador de tiempo
+                timerTextView.text = (millisUntilFinished / 1000).toString()
             }
 
             override fun onFinish() {
-                // Tiempo agotado, muestra la respuesta correcta
-                val correctAnswerIndex = questionList[currentQuestionIndex].correctAnswer
+                val correctAnswerIndex = selectedQuestions[currentQuestionIndex].correctAnswer
                 when (correctAnswerIndex) {
-                    0 -> answerButton1.setBackgroundColor(resources.getColor(R.color.correct_button_normal))
-                    1 -> answerButton2.setBackgroundColor(resources.getColor(R.color.correct_button_normal))
-                    2 -> answerButton3.setBackgroundColor(resources.getColor(R.color.correct_button_normal))
+                    0 -> answerButton1.setBackgroundResource(R.drawable.good_pressed)
+                    1 -> answerButton2.setBackgroundResource(R.drawable.good_pressed)
+                    2 -> answerButton3.setBackgroundResource(R.drawable.good_pressed)
                 }
 
-                // Espera un momento y luego muestra la siguiente pregunta
+                // Deshabilita los botones después de que el tiempo ha expirado
+                answerButton1.isEnabled = false
+                answerButton2.isEnabled = false
+                answerButton3.isEnabled = false
+
                 val handler = android.os.Handler()
                 handler.postDelayed({
                     currentQuestionIndex++
-                    if (currentQuestionIndex < questionList.size) {
-                        displayQuestion(questionList[currentQuestionIndex])
+                    isQuestionAnswered = false  // Reinicia el estado de la pregunta
+                    if (currentQuestionIndex < selectedQuestions.size) {
+                        displayQuestion(selectedQuestions[currentQuestionIndex])
                     } else {
                         showFinalScore()
                     }
-                }, 2000) // Espera 2 segundos
+                    // Habilita los botones después de un retraso (ejemplo: 2000 ms)
+                    handler.postDelayed({
+                        answerButton1.isEnabled = true
+                        answerButton2.isEnabled = true
+                        answerButton3.isEnabled = true
+                    }, 2000)
+                }, 2000)
             }
         }.start()
     }
 
-    private fun loadQuestionsFromJson(): List<Question> {
-        val questions = mutableListOf<Question>()
-        try {
-            val inputStream: InputStream = resources.openRawResource(R.raw.questions)
-            val size: Int = inputStream.available()
-            val buffer = ByteArray(size)
-            inputStream.read(buffer)
-            inputStream.close()
-            val json = String(buffer, Charsets.UTF_8)
+    private fun selectRandomQuestions(count: Int) {
+        val totalQuestions = questionList.size
 
-            val jsonArray = JSONArray(json)
-
-            for (i in 0 until jsonArray.length()) {
-                val jsonObject: JSONObject = jsonArray.getJSONObject(i)
-
-                val question: String = jsonObject.getString("question")
-                val text: String = jsonObject.getString("text")
-                val answersArray: JSONArray = jsonObject.getJSONArray("answers")
-                val answers = mutableListOf<String>()
-
-                for (j in 0 until answersArray.length()) {
-                    answers.add(answersArray.getString(j))
+        if (count >= totalQuestions) {
+            selectedQuestions.addAll(questionList)
+        } else {
+            while (selectedQuestions.size < count) {
+                val randomIndex = random.nextInt(totalQuestions)
+                val randomQuestion = questionList[randomIndex]
+                if (!selectedQuestions.contains(randomQuestion)) {
+                    selectedQuestions.add(randomQuestion)
                 }
-                val correctAnswer: Int = jsonObject.getInt("correctAnswer")
-
-                val quizData = Question(question, text, answers, correctAnswer)
-                questions.add(quizData)
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
         }
-        return questions
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        // Comienza a rastrear el tiempo cuando la actividad comienza
+        timeTracker.startTrackingTime()
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        // Detiene el rastreo del tiempo cuando la actividad se detiene
+        timeTracker.stopTrackingTime()
     }
 }
+

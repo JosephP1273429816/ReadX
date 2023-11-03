@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorIconText</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="windowActionBar">false</item> <!-- Mantén esto para ocultar la barra de acción -->
+        <!-- Otros atributos de estilo según tus necesidades -->
+    </style>
+
+    <style name="AppTheme.Light" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="windowActionBar">false</item> <!-- Mantén esto para ocultar la barra de acción -->
+        <!-- Otros atributos de estilo para el modo claro según tus necesidades -->
+    </style>
+
+
+</resources>

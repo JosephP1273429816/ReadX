@@ -27,59 +27,98 @@
                 android:id="@+id/questionTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/fontprin"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
+                android:textStyle="bold"
                 android:text="@string/pregunta_aqu"
                 android:textAlignment="center"
-                android:textColor="#26A69A"
-                android:textSize="18sp"
+                android:textColor="@color/primarySecond"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/timerTextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/answerButton3"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/fontprin"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
                 android:text="@string/texto_largo_aqu_que_requiere_desplazamiento_si_es_demasiado_largo"
-                android:textColor="#26A69A"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/timerTextView"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/questionTextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/questionTextView"
-                app:layout_constraintVertical_bias="0.01" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/answerButton1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/bottonr"
-                android:fontFamily="@font/fontprin"
+                android:background="@drawable/botton"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/primarySecond"
                 android:text="@string/respuesta_1"
                 app:layout_constraintBottom_toTopOf="@+id/answerButton2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.473"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="VisualLintButtonSize"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"/>
 
             <Button
                 android:id="@+id/answerButton2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/bottonr"
-                android:fontFamily="@font/fontprin"
+                android:background="@drawable/botton"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/primarySecond"
                 android:text="@string/respuesta_2"
                 app:layout_constraintBottom_toTopOf="@+id/answerButton3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.473"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="VisualLintButtonSize"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"/>
+
+            <Button
+                android:id="@+id/answerButton3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/botton"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/primarySecond"
+                android:text="@string/respuesta_3"
+                app:layout_constraintBottom_toTopOf="@+id/space"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="VisualLintButtonSize"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"/>
 
             <ProgressBar
                 android:id="@+id/timerProgressBar"
@@ -93,20 +132,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.775"
                 app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/answerButton3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/bottonr"
-                android:fontFamily="@font/fontprin"
-                android:text="@string/respuesta_3"
-                app:layout_constraintBottom_toTopOf="@+id/space"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent" />
-
             <TextView
                 android:id="@+id/space"
                 android:layout_width="wrap_content"
@@ -122,14 +147,16 @@
                 android:id="@+id/timerTextView"
                 android:layout_width="91dp"
                 android:layout_height="37dp"
-                android:fontFamily="@font/fontprin"
                 android:gravity="center"
                 android:text="@string/_30"
-                android:textColor="@color/primarySecond"
-                android:textSize="15sp"
+                android:textColor="#26A69A"
+                android:textSize="10sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/timerProgressBar"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="SmallSp" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
