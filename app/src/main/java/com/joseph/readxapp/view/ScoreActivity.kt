@@ -14,6 +14,7 @@ class ScoreActivity : AppCompatActivity() {
 
     private val timeTracker: TimeTracker by lazy { TimeTracker.getInstance(this) }
     private val scoreManager: ScoreManager = ScoreManager()
+    private var score: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,7 @@ class ScoreActivity : AppCompatActivity() {
         }
 
         val scoreTextView = findViewById<TextView>(R.id.scoreTextView)
-        val score = intent.getIntExtra("score", 0)
+        score = intent.getIntExtra("score", 0)
         scoreTextView.text = "Tu puntaje es: $score"
     }
 
@@ -43,17 +44,12 @@ class ScoreActivity : AppCompatActivity() {
         // Detiene el rastreo del tiempo cuando la actividad se detiene
         timeTracker.stopTrackingTime()
 
-        // Obtiene el puntaje del usuario
-        val score = intent.getIntExtra("score", 0)
-
         // Obtiene el ID de usuario autenticado
         val userId = FirebaseAuth.getInstance().currentUser?.uid
 
         if (userId != null) {
             // Guarda el puntaje en Firestore utilizando el ScoreManager
             scoreManager.saveGlobalScore(userId, score)
-            scoreManager.saveWeeklyScore(userId, score)
         }
     }
 }
-

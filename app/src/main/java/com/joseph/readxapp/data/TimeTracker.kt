@@ -4,10 +4,11 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import java.util.Calendar
+import java.util.*
 import java.util.concurrent.TimeUnit
+import android.net.ConnectivityManager
 
-class TimeTracker private constructor(context: Context) {
+class TimeTracker private constructor(private val context: Context) {
     private val db = FirebaseFirestore.getInstance()
     private val userId = FirebaseAuth.getInstance().currentUser?.uid
     private var startTimeMillis: Long = 0
@@ -47,10 +48,24 @@ class TimeTracker private constructor(context: Context) {
 
     fun stopTrackingTime() {
         val dayOfWeek = getDayOfWeek()
-        val userRef = db.collection("TimeUser").document(userId!!)
         val endTimeMillis = System.currentTimeMillis()
         val elapsedTimeMillis = endTimeMillis - startTimeMillis
 
+        // Guarda el tiempo localmente si no hay conexión a Internet
+        if (!isConnectedToInternet()) {
+            val previousTimeMillis = sharedPrefs.getLong(dayOfWeek, 0)
+            val newTimeMillis = previousTimeMillis + elapsedTimeMillis
+            val editor = sharedPrefs.edit()
+            editor.putLong(dayOfWeek, newTimeMillis)
+            editor.apply()
+        } else {
+            // Sincroniza el tiempo con Firestore si hay conexión a Internet
+            syncTimeWithFirestore(dayOfWeek, elapsedTimeMillis)
+        }
+    }
+
+    private fun syncTimeWithFirestore(dayOfWeek: String, elapsedTimeMillis: Long) {
+        val userRef = db.collection("TimeUser").document(userId!!)
         userRef.get().addOnSuccessListener { documentSnapshot ->
             val previousTimeMillis = documentSnapshot.getLong(dayOfWeek) ?: 0
             val newTimeMillis = previousTimeMillis + elapsedTimeMillis
@@ -64,6 +79,12 @@ class TimeTracker private constructor(context: Context) {
             )
             userRef.update(data)
         }
+    }
+
+    private fun isConnectedToInternet(): Boolean {
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfo = connectivityManager.activeNetworkInfo
+        return networkInfo != null && networkInfo.isConnected
     }
 
     fun resetWeeklyTime() {

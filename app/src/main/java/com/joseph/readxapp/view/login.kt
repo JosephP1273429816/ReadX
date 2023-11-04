@@ -1,9 +1,13 @@
 package com.joseph.readxapp.view
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -18,6 +22,7 @@ class login : AppCompatActivity() {
     private lateinit var registerButton: Button
     private lateinit var resetPasswordButton: Button
     private lateinit var errorTextView: TextView
+    private lateinit var showPasswordToggle: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +35,17 @@ class login : AppCompatActivity() {
         registerButton = findViewById(R.id.registrarseccion)
         resetPasswordButton = findViewById(R.id.resetPasswordButton)
         errorTextView = findViewById(R.id.errorTextView)
+        showPasswordToggle = findViewById(R.id.showPasswordToggle)
 
         // Verifica si el usuario ya ha iniciado sesión
         if (mAuth.currentUser != null) {
             // El usuario ya ha iniciado sesión, redirige a la pantalla "home"
             startActivity(Intent(this, Home::class.java))
             finish()
+        }
+
+        showPasswordToggle.setOnClickListener {
+            togglePasswordVisibility()
         }
 
         loginButton.setOnClickListener {
@@ -94,5 +104,22 @@ class login : AppCompatActivity() {
                     }
             }
         }
+    }
+
+    private fun togglePasswordVisibility() {
+        if (passwordEditText.inputType == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
+            passwordEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            showPasswordToggle.setImageResource(R.drawable.ic_visibility_off)
+        } else {
+            passwordEditText.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+            showPasswordToggle.setImageResource(R.drawable.ic_visibility_on)
+        }
+        // Mover el cursor al final del texto
+        passwordEditText.setSelection(passwordEditText.text.length)
+    }
+
+    @SuppressLint("MissingSuperCall")
+    override fun onBackPressed() {
+        // No hagas nada
     }
 }

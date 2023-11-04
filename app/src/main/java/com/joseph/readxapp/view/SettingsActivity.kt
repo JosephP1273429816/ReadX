@@ -10,7 +10,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
 import com.joseph.readxapp.R
-import com.joseph.readxapp.view.login
 import android.app.AlertDialog
 import android.text.InputType
 import android.widget.EditText
@@ -71,9 +70,14 @@ class SettingsActivity : AppCompatActivity() {
 
         builder.setPositiveButton("Confirmar") { dialog, _ ->
             val password = input.text.toString()
-            // Verificar la contraseña y proceder con la eliminación de la cuenta
-            verifyPasswordAndDeleteAccount(password)
-            dialog.dismiss()
+
+            if (password.isNotEmpty()) {
+                // Verificar la contraseña y proceder con la eliminación de la cuenta
+                verifyPasswordAndDeleteAccount(password)
+                dialog.dismiss()
+            } else {
+                showError("Por favor, ingresa tu contraseña.")
+            }
         }
 
         builder.setNegativeButton("Cancelar") { dialog, _ ->

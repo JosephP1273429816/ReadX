@@ -62,7 +62,7 @@ class Home : AppCompatActivity() {
 
                 for (document in snapshots!!) {
                     val userName = document.getString("name")
-                    val globalScore = document.getLong("weeklyScore")
+                    val globalScore = document.getLong("globalScore")
                     userScores[userName] = globalScore
                 }
 

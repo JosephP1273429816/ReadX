@@ -29,7 +29,7 @@ class QuizActivity : AppCompatActivity() {
 
     private lateinit var countDownTimer: CountDownTimer
     private val countdownInterval: Long = 1000
-    private val totalMilliseconds: Long = 60000
+    private val totalMilliseconds: Long = 210000
 
     private val random = Random()
     private val selectedQuestions: MutableList<Question> = mutableListOf()
@@ -153,7 +153,11 @@ class QuizActivity : AppCompatActivity() {
             override fun onTick(millisUntilFinished: Long) {
                 val progress = (millisUntilFinished / 1000).toInt()
                 timerProgressBar.progress = progress
-                timerTextView.text = (millisUntilFinished / 1000).toString()
+
+                val minutes = progress / 60
+                val seconds = progress % 60
+                val timeString = String.format("%02d:%02d", minutes, seconds)
+                timerTextView.text = timeString
             }
 
             override fun onFinish() {

@@ -9,32 +9,22 @@
     android:backgroundTint="@color/primary"
     tools:context=".view.RegisterActivity">
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:importantForAccessibility="no"
+
+    <Button
+        android:id="@+id/TérminosyCondicionesdeUsoBotton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/transp"
+        android:text="@string/t_rminos_y_condiciones_de_uso"
+        android:textAllCaps="false"
+        android:textColor="#26A69A"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@color/boton" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="299dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
-        android:gravity="fill_vertical"
-        android:text="Lee para expandir tus horizontes y descubrir un mundo de posibilidades."
-        android:textColor="@color/primarySecond"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/registrarseccion"
+        tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
 
     <ImageButton
         android:id="@+id/botonIrAHomeDos2"
@@ -53,7 +43,7 @@
         android:id="@+id/imageView6"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/icon"
         android:contentDescription="@string/Logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,9 +55,9 @@
         android:id="@+id/editTextTextPassword"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:autofillHints=""
-        android:background="@drawable/edit"
+        android:background="@drawable/textedit"
         android:ems="10"
         android:hint="@string/Contraseña"
         android:importantForAccessibility="no"
@@ -86,9 +76,9 @@
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:autofillHints=""
-        android:background="@drawable/edit"
+        android:background="@drawable/textedit"
         android:ems="10"
         android:hint="@string/email"
         android:importantForAccessibility="no"
@@ -107,15 +97,29 @@
         android:id="@+id/registrarseccion"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bottonr"
         android:text="@string/registrar"
         android:textAllCaps="false"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <ImageView
+        android:id="@+id/showPasswordToggle"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="5dp"
+        android:clickable="true"
+        android:contentDescription=""
+        android:focusable="true"
+        android:src="@drawable/ic_visibility_off"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPassword"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/errorTextView"
@@ -126,8 +130,9 @@
         android:text=""
         android:textColor="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrarseccion" />
+        app:layout_constraintTop_toBottomOf="@+id/TérminosyCondicionesdeUsoBotton" />
 
     <EditText
         android:id="@+id/editTextNombre"
@@ -135,7 +140,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="76dp"
         android:autofillHints=""
-        android:background="@drawable/edit"
+        android:background="@drawable/textedit"
         android:ems="10"
         android:hint="@string/name"
         android:importantForAccessibility="no"
@@ -148,4 +153,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
         tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrarseccion"
+        tools:ignore="TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

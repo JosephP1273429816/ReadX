@@ -14,5 +14,6 @@
     <color name="colorPrimaryDark">#202732</color>
     <color name="colorIconText">#008577</color>
     <color name="boton">#1B1F28</color>
+    <color name="botonesTex">#F3BA33</color>
 
 </resources>
