@@ -2,6 +2,7 @@ package com.joseph.readxapp.view
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import android.os.CountDownTimer
 import android.widget.Button
 import android.widget.ProgressBar
@@ -64,6 +65,32 @@ class QuizActivity : AppCompatActivity() {
         }
 
         startTime = System.currentTimeMillis()
+    }
+
+    override fun onBackPressed() {
+        if (!isQuestionAnswered) {
+            showExitConfirmationDialog()
+        } else {
+            super.onBackPressed() // Permite que la actividad se cierre si una pregunta ha sido respondida
+        }
+    }
+
+    private fun showExitConfirmationDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Confirmación de salida")
+        builder.setMessage("¿Está seguro de que desea salir de la actividad? El progreso se perderá.")
+
+        builder.setPositiveButton("Sí") { dialog, _ ->
+            finish() // Cierra la actividad
+            dialog.dismiss()
+        }
+
+        builder.setNegativeButton("No") { dialog, _ ->
+            dialog.cancel()
+        }
+
+        val dialog = builder.create()
+        dialog.show()
     }
 
     private fun displayQuestion(question: Question) {
@@ -223,4 +250,5 @@ class QuizActivity : AppCompatActivity() {
         timeTracker.stopTrackingTime()
     }
 }
+
 

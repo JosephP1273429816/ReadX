@@ -66,7 +66,15 @@ class RegisterActivity : AppCompatActivity() {
 
         registerButton.setOnClickListener {
             if (checkBox.isChecked) {
-                performRegistration()
+                val name = nameEditText.text.toString()
+                val email = emailEditText.text.toString()
+                val password = passwordEditText.text.toString()
+
+                if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                    errorTextView.text = "Por favor, completa todos los campos."
+                } else {
+                    performRegistration()
+                }
             } else {
                 errorTextView.text = "Debes aceptar los Términos y Condiciones de Uso para registrarte."
             }

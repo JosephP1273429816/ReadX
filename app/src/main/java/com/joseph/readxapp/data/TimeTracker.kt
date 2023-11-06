@@ -84,7 +84,7 @@ class TimeTracker private constructor(private val context: Context) {
     private fun isConnectedToInternet(): Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkInfo = connectivityManager.activeNetworkInfo
-        return networkInfo != null && networkInfo.isConnected
+        return networkInfo?.isConnected == true
     }
 
     fun resetWeeklyTime() {
@@ -114,4 +114,7 @@ class TimeTracker private constructor(private val context: Context) {
         return minutes
     }
 }
+
+
+
 

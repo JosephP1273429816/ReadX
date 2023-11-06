@@ -89,10 +89,11 @@
         android:text="@string/promedio_semanal"
         android:textColor="@color/primarySecond"
         android:textSize="10sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barChart"
-        tools:ignore="SmallSp" />
+        tools:ignore="SmallSp,TextContrastCheck" />
 
 
     //barra de tareas

@@ -128,7 +128,7 @@
         android:id="@+id/showPasswordToggle"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="10dp"
         android:clickable="true"
         android:contentDescription=""
         android:focusable="true"
