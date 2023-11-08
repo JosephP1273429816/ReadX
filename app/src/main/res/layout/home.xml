@@ -1,64 +1,60 @@
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
-    android:backgroundTint="@color/primary"
-    tools:context=".view.Home"
     android:theme="@style/AppTheme"
     tools:ignore="ExtraText">
 
-
-    <ImageView
-        android:id="@+id/imageView9"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@color/boton"
-        android:importantForAccessibility="no" />
+        android:layout_height="wrap_content">
 
-    <ListView
-        android:id="@+id/rankingListView"
-        android:layout_width="191dp"
-        android:layout_height="252dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/boton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chartTitle2" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="170dp"
+            android:layout_height="275dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:srcCompat="@drawable/bottonr" />
+
+        <ListView
+            android:id="@+id/SemanalrankingListView"
+            android:layout_width="160dp"
+            android:layout_height="250dp"
+            android:background="@color/gris"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
     <TextView
-        android:id="@+id/chartTitle2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/barChart"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/ranking"
-        android:textColor="@color/primarySecond"
-        android:textSize="12sp"
+        android:id="@+id/bienvenida"
+        android:layout_width="237dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/bienvenido_name"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/promedioTextView"
-        tools:ignore="TextContrastCheck" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextSizeCheck,UnknownId,TextContrastCheck" />
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barChart"
         android:layout_width="345dp"
         android:layout_height="205dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chartTitle" />
@@ -71,8 +67,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="@string/actividad_del_usuario_por_días_de_la_semana"
-        android:textColor="@color/primarySecond"
-        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,194 +81,109 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/barChart"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="@string/promedio_semanal"
-        android:textColor="@color/primarySecond"
-        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barChart"
         tools:ignore="SmallSp,TextContrastCheck" />
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="170dp"
+            android:layout_height="275dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:srcCompat="@drawable/bottonr" />
 
-    //barra de tareas
+        <ListView
+            android:id="@+id/rankingListView"
+            android:layout_width="160dp"
+            android:layout_height="252dp"
+            android:background="@color/gris"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
-    <ImageView
-        android:id="@+id/Lgo"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="20dp"
-        android:contentDescription="@string/Logo"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toStartOf="@+id/bienvenida"
+        <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/space"
+        android:textColor="@color/transp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/icon_home"
-        tools:ignore="UnknownId" />
+        app:layout_constraintTop_toBottomOf="@+id/promedioTextView"
+        app:layout_constraintVertical_bias="0.235" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semanal"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Global"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/bienvenida"
-        android:layout_width="237dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="@string/bienvenido_name"
-        android:textColor="@color/primarySecond"
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/ranking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextSizeCheck,UnknownId,TextContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@color/boton"
-        android:importantForAccessibility="no" />
-
-    <Button
-        android:id="@+id/ajustes"
-        android:layout_width="80dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/transp"
-        android:contentDescription="@string/ajustes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/jugar"
-        app:layout_constraintHorizontal_bias="0.247"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
-
-    <Button
-        android:id="@+id/soporte"
-        android:layout_width="80dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/transp"
-        android:contentDescription="@string/amigos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
-        app:layout_constraintStart_toEndOf="@+id/jugar"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <Button
-        android:id="@+id/jugar"
-        android:layout_width="80dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/transp"
-        android:contentDescription="@string/amigos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <TextView
-        android:id="@+id/texFriend"
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:layout_marginBottom="4dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/amigos"
-        android:textColor="@color/primarySecond"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/soporte"
-        app:layout_constraintEnd_toEndOf="@+id/soporte"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/soporte"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:ignore="SmallSp,TextSizeCheck,UnknownId,TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/texConfi"
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:layout_marginBottom="4dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/ajustes"
-        android:textColor="@color/primarySecond"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/ajustes"
-        app:layout_constraintEnd_toEndOf="@+id/ajustes"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ajustes"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:ignore="SmallSp,TextSizeCheck,UnknownId,TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/texGame"
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:layout_marginBottom="4dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/jugar"
-        android:textColor="@color/primarySecond"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/jugar"
-        app:layout_constraintEnd_toEndOf="@+id/jugar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/jugar"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        tools:ignore="SmallSp,TextSizeCheck,UnknownId,TextContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imagegame"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:contentDescription="@string/ImgGame"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/jugar"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/game"
-        app:tint="@color/primarySecond" />
-
-    <ImageView
-        android:id="@+id/imageFriend"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/ayudar"
-        android:backgroundTint="@color/primarySecond"
-        app:layout_constraintBottom_toBottomOf="@+id/soporte"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.726"
-        app:layout_constraintStart_toEndOf="@+id/imagegame"
-        tools:ignore="ContentDescription,ImageContrastCheck,ImageContrastCheck,VisualLintBounds" />
-
-    <ImageView
-        android:id="@+id/imageConfi"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/configuraciones"
-        android:backgroundTint="@color/primarySecond"
-        android:contentDescription="@string/Confimg"
-        app:layout_constraintBottom_toBottomOf="@+id/ajustes"
-        app:layout_constraintEnd_toStartOf="@+id/imagegame"
-        app:layout_constraintHorizontal_bias="0.293"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/promedioTextView" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/hometransp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/loadingProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

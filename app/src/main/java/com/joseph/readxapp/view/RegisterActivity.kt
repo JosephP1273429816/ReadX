@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
-import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -167,7 +166,7 @@ class RegisterActivity : AppCompatActivity() {
                                             .document(userId)
                                             .set(initialTimeUser)
                                             .addOnSuccessListener {
-                                                val intent = Intent(this, Home::class.java)
+                                                val intent = Intent(this, Inicio::class.java)
                                                 startActivity(intent)
                                                 finish()
                                             }

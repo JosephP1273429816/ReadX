@@ -40,7 +40,7 @@ class login : AppCompatActivity() {
         // Verifica si el usuario ya ha iniciado sesión
         if (mAuth.currentUser != null) {
             // El usuario ya ha iniciado sesión, redirige a la pantalla "home"
-            startActivity(Intent(this, Home::class.java))
+            startActivity(Intent(this, Inicio::class.java))
             finish()
         }
 
@@ -61,7 +61,7 @@ class login : AppCompatActivity() {
                             // Inicio de sesión exitoso
                             val user = mAuth.currentUser
                             // Redirige a la actividad "home"
-                            startActivity(Intent(this, Home::class.java))
+                            startActivity(Intent(this, Inicio::class.java))
                             finish()
                         } else {
                             // El inicio de sesión falló

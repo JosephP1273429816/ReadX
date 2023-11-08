@@ -3,26 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/fragment_home">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.joseph.readxapp.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/fragment_home"
+        android:name="com.joseph.readxapp.view.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home" />
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.joseph.readxapp.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/fragment_quiz"
+        android:name="com.joseph.readxapp.view.QuizOneFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/quiznumberone" />
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+    <fragment
+        android:id="@+id/fragment_confi"
+        android:name="com.joseph.readxapp.view.SettingsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/settings_activity" />
+
+    <action
+        android:id="@+id/action_home_to_quiz"
+        app:destination="@id/fragment_quiz" />
+
+    <action
+        android:id="@+id/action_home_to_config"
+        app:destination="@id/fragment_confi" />
+
+    <action
+        android:id="@+id/action_quiz_to_home"
+        app:destination="@id/fragment_home" />
+
+    <action
+        android:id="@+id/action_config_to_home"
+        app:destination="@id/fragment_home" />
+
+
 </navigation>

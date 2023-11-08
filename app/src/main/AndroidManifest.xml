@@ -17,13 +17,9 @@
         <activity
             android:name=".view.login"
             android:screenOrientation="portrait"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/AppTheme"
             tools:ignore="LockedOrientationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
@@ -35,9 +31,16 @@
             tools:ignore="LockedOrientationActivity">
         </activity>
 
-
         <activity
             android:name=".view.QuizActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity,RedundantLabel">
+        </activity>
+        <activity
+            android:name=".view.Inicio"
             android:exported="false"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
@@ -52,13 +55,6 @@
             android:theme="@style/AppTheme"
             tools:ignore="LockedOrientationActivity,RedundantLabel">
         </activity>
-        <activity
-            android:name=".view.SettingsActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name"
-            tools:ignore="LockedOrientationActivity,RedundantLabel">
-        </activity>
 
         <activity
             android:name=".view.ScoreActivity"
@@ -69,18 +65,17 @@
             tools:ignore="LockedOrientationActivity,RedundantLabel">
         </activity>
         <activity
-            android:name=".view.Home"
+            android:name=".view.SplashScreenActivity"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:exported="false"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity,RedundantLabel">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity
-            android:name=".view.QuizOne"
-            android:screenOrientation="portrait"
-            android:exported="false"
-            android:theme="@style/AppTheme"
-            tools:ignore="LockedOrientationActivity">
-        </activity>
+
     </application>
 </manifest>

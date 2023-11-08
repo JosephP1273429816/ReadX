@@ -2,6 +2,6 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="@color/wrong_button_pressed"/>
     <stroke android:width="3dp"
-        android:color="@color/primarySecond" />
+        android:color="@color/white" />
     <corners android:radius="40dp"/>
 </shape>

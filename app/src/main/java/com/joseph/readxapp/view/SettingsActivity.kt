@@ -2,36 +2,48 @@ package com.joseph.readxapp.view
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
-import android.widget.Toast
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.EmailAuthProvider
-import com.google.firebase.firestore.FirebaseFirestore
-import com.joseph.readxapp.R
-import android.app.AlertDialog
-import android.text.InputType
 import android.widget.EditText
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.google.firebase.auth.EmailAuthProvider
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import androidx.appcompat.app.AlertDialog
+import com.joseph.readxapp.R
+import android.text.InputType
 import com.joseph.readxapp.data.TimeTracker
 
-class SettingsActivity : AppCompatActivity() {
 
-    private val timeTracker: TimeTracker by lazy { TimeTracker.getInstance(this) }
+class SettingsFragment : Fragment() {
+    private val timeTracker: TimeTracker by lazy { TimeTracker.getInstance(requireContext()) }
     private lateinit var logoutButton: Button
     private lateinit var deleteAccountButton: Button
+    private lateinit var soporteButton: Button
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.settings_activity)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val rootView = inflater.inflate(R.layout.settings_activity, container, false)
 
         auth = FirebaseAuth.getInstance()
         firestore = FirebaseFirestore.getInstance()
 
-        logoutButton = findViewById(R.id.logoutButton)
-        deleteAccountButton = findViewById(R.id.deleteAccountButton)
+        soporteButton= rootView.findViewById<Button>(R.id.soporteButton)
+        logoutButton = rootView.findViewById(R.id.logoutButton)
+        deleteAccountButton = rootView.findViewById(R.id.deleteAccountButton)
+
+        soporteButton.setOnClickListener {
+            val intent = Intent(requireContext(), soport::class.java)
+            startActivity(intent)
+        }
+
 
         logoutButton.setOnClickListener {
             // Mostrar un diálogo de confirmación antes de cerrar sesión
@@ -44,27 +56,23 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         // Agregar OnClickListener para el botón de regresar a la pantalla de inicio
-        val botonIrAHome = findViewById<ImageButton>(R.id.botonIrAHomeDos)
-        botonIrAHome.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
-        }
+        return rootView
     }
 
     private fun showSuccessMessage(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     private fun showError(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     private fun showConfirmationDialog() {
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Confirmar eliminación de cuenta")
         builder.setMessage("Por favor, ingrese su contraseña para confirmar la eliminación de la cuenta.")
 
-        val input = EditText(this)
+        val input = EditText(requireContext())
         input.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
         builder.setView(input)
 
@@ -89,7 +97,7 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun showLogoutConfirmationDialog() {
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Confirmar cierre de sesión")
         builder.setMessage("¿Está seguro de que desea cerrar la sesión?")
 
@@ -97,9 +105,9 @@ class SettingsActivity : AppCompatActivity() {
             // Cerrar la sesión del usuario actual
             auth.signOut()
             // Redirigir al usuario a la pantalla de inicio de sesión
-            val intent = Intent(this, login::class.java)
+            val intent = Intent(requireContext(), login::class.java)
             startActivity(intent)
-            finish() // Cierra la actividad actual
+            requireActivity().finish() // Cierra la actividad actual
             dialog.dismiss()
         }
 
@@ -147,9 +155,9 @@ class SettingsActivity : AppCompatActivity() {
                                                                             // La cuenta se ha eliminado exitosamente
                                                                             showSuccessMessage("Cuenta eliminada con éxito. Vuelva pronto.")
                                                                             // Redirigir al usuario a la pantalla de inicio de sesión
-                                                                            val intent = Intent(this, login::class.java)
+                                                                            val intent = Intent(requireContext(), login::class.java)
                                                                             startActivity(intent)
-                                                                            finish() // Cierra la actividad actual
+                                                                            requireActivity().finish() // Cierra la actividad actual
                                                                         } else {
                                                                             // Ocurrió un error al eliminar la cuenta
                                                                             showError("Error al eliminar la cuenta: ${deleteAccountTask.exception?.message}")
@@ -186,14 +194,14 @@ class SettingsActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        // Comienza a rastrear el tiempo cuando la actividad comienza
+        // Comienza a rastrear el tiempo cuando el fragmento comienza
         timeTracker.startTrackingTime()
     }
 
     override fun onStop() {
         super.onStop()
 
-        // Detiene el rastreo del tiempo cuando la actividad se detiene
+        // Detiene el rastreo del tiempo cuando el fragmento se detiene
         timeTracker.stopTrackingTime()
     }
 }

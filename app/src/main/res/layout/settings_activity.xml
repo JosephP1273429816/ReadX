@@ -3,35 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/primary"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.SettingsActivity">
-
-    <!-- Botón para cerrar sesión -->
-
-    <TextView
-        android:id="@+id/errorTextView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:text=""
-        android:textColor="#FF0000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deleteAccountButton" />
+    android:layout_height="match_parent">
 
 
     <TextView
         android:id="@+id/settingsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:paddingTop="16dp"
         android:text="@string/configuración"
-        android:textColor="@color/primarySecond"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -43,11 +27,10 @@
         android:layout_width="145dp"
         android:layout_height="48dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/bottonr"
-        android:fontFamily="@font/fonttex"
+        android:background="@drawable/botton"
         android:text="@string/cerrar_sesion"
         android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/deleteAccountButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,33 +39,34 @@
 
     <Button
         android:id="@+id/deleteAccountButton"
-        android:layout_width="158dp"
+        android:layout_width="145dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="88dp"
-        android:background="@drawable/bottonr"
-        android:fontFamily="@font/fonttex"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/botton"
         android:text="@string/eliminar_cuenta"
         android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/soporteButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck,TextContrastCheck" />
 
-    <ImageButton
-        android:id="@+id/botonIrAHomeDos"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/atras"
-        android:backgroundTint="@color/primarySecond"
-        android:contentDescription="@string/atras"
+    <Button
+        android:id="@+id/soporteButton"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/botton"
+        android:text="Soporte"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+        tools:ignore="HardcodedText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

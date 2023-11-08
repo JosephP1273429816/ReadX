@@ -32,10 +32,15 @@ class TimeTracker private constructor(private val context: Context) {
         sharedPrefs = context.getSharedPreferences("TimeTrackerPrefs", Context.MODE_PRIVATE)
         val lastResetWeek = sharedPrefs.getInt(lastResetWeekKey, -1)
         val currentWeek = Calendar.getInstance().get(Calendar.WEEK_OF_YEAR)
+        val dayOfWeek = getDayOfWeek()
 
-        // Si la última semana de reinicio no es la semana actual, reinicia el tiempo
-        if (lastResetWeek != currentWeek) {
+        // Verifica si es el mismo día de la semana que la semana pasada
+        val lastResetDayOfWeek = sharedPrefs.getString("lastResetDayOfWeek", "")
+        if (lastResetWeek != currentWeek || lastResetDayOfWeek != dayOfWeek) {
             resetTime()
+            val editor = sharedPrefs.edit()
+            editor.putString("lastResetDayOfWeek", dayOfWeek)
+            editor.apply()
         }
     }
 
@@ -114,7 +119,3 @@ class TimeTracker private constructor(private val context: Context) {
         return minutes
     }
 }
-
-
-
-

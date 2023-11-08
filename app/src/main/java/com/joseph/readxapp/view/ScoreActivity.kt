@@ -18,11 +18,11 @@ class ScoreActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.rankin)
+        setContentView(R.layout.puntaje)
 
         val botonIrAHome = findViewById<ImageButton>(R.id.botonIrAHomeDos)
         botonIrAHome.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
+            val intent = Intent(this, Inicio::class.java)
             startActivity(intent)
         }
 

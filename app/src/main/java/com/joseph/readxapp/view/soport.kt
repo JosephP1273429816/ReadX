@@ -22,7 +22,7 @@ class soport : AppCompatActivity() {
         // Configura un OnClickListener para el botón "atras"
         atrasButton.setOnClickListener {
             // Inicia la actividad de inicio (HomeActivity)
-            val intent = Intent(this, Home::class.java)
+            val intent = Intent(this, Inicio::class.java)
             startActivity(intent)
         }
 
