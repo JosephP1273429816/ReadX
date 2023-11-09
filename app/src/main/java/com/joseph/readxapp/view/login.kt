@@ -4,11 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
@@ -78,11 +78,8 @@ class login : AppCompatActivity() {
 
         registerButton.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
-
-            // Iniciar la actividad de registro
             startActivity(intent)
         }
-
         resetPasswordButton.setOnClickListener {
             val email = emailEditText.text.toString()
 
@@ -120,6 +117,19 @@ class login : AppCompatActivity() {
 
     @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
-        // No hagas nada
+        showExitConfirmationDialog()
     }
+
+    private fun showExitConfirmationDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Salir de la aplicación")
+        builder.setMessage("¿Estás seguro de que quieres salir de la aplicación?")
+        builder.setPositiveButton("Sí") { _, _ ->
+            finish()
+        }
+        builder.setNegativeButton("No") { _, _ ->
+        }
+        builder.show()
+    }
+
 }

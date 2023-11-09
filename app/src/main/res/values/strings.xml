@@ -185,7 +185,21 @@
     <string name="aumentar_tamaño_de_texto">Aumentar Tamaño de Texto</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
     <string name="configuración">Configuración</string>
-    <string name="gif">Gracias por ayudar a probar la aplicación. Si tienes sugerencias o informes sobre la misma, por favor, completa el cuestionario. ¡Muchas gracias! (toca la imagen) :D</string>
+    <string name="gif">
+<![CDATA[Estimado usuario,\u0020\n\u0020\n
+Un PQRS es un sistema que permite a los usuarios presentar Peticiones, Quejas, Reclamos y Sugerencias. Estas pueden estar relacionadas con cualquier aspecto de nuestra aplicación que creas que podría mejorarse o que te esté causando problemas.\u0020\n
+Aquí te explicamos cómo puedes enviar un PQRS:\u0020\n\u0020\n
+1. Identifica tu necesidad: Antes de enviar un PQRS, identifica si lo que quieres enviar es una Petición, Queja, Reclamo o Sugerencia.\u0020\n\u0020\n
+2. Haz clic en el botón de PQRS: En nuestra aplicación, encontrarás un botón dedicado para enviar PQRS. Haz clic en él.\u0020\n\u0020\n
+3. Completa el formulario: Se te presentará un formulario para completar con tu información y los detalles de tu PQRS.\u0020\n\u0020\n
+4. Envía tu PQRS: Una vez que hayas completado el formulario, puedes enviar tu PQRS. Nos esforzamos por responder a todas las consultas dentro de un plazo de 48 horas.\u0020\n\u0020\n
+Esperamos que esta información te sea útil y te animamos a que utilices el sistema de PQRS para ayudarnos a mejorar nuestra aplicación.\u0020\n\u0020\n
+Atentamente,\u0020\n\u0020\n
+ReadX
+]]>
+</string>
+
+
     <string name="gift2">TODO</string>
     <string name="soporte">Soporte</string>
     <string name="IMAGEN">TODO</string>

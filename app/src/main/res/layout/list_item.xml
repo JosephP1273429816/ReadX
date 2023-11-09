@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- list_item.xml -->
     <TextView
         android:id="@+id/list_item_text"
         android:layout_width="139dp"
         android:layout_height="40dp"
         android:gravity="center"
         android:padding="10dp"
+        android:fontFamily="@font/fuente"
         android:textColor="@color/white"
-        android:textSize="8sp"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

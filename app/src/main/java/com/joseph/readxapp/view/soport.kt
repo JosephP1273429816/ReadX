@@ -40,11 +40,6 @@ class soport : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Carga el GIF en el ImageView usando Glide
-        Glide.with(this)
-            .asGif()
-            .load(R.drawable.happy) // Reemplaza "your_gif" con el nombre de tu archivo GIF
-            .into(imageView)
     }
 
     override fun onStart() {

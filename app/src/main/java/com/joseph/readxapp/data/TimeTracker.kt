@@ -14,6 +14,7 @@ class TimeTracker private constructor(private val context: Context) {
     private var startTimeMillis: Long = 0
     private val sharedPrefs: SharedPreferences
     private val lastResetWeekKey = "lastResetWeek"
+    private var disconnectedTimeMillis: Long = 0 // Nuevo
 
     companion object {
         @Volatile
@@ -32,15 +33,10 @@ class TimeTracker private constructor(private val context: Context) {
         sharedPrefs = context.getSharedPreferences("TimeTrackerPrefs", Context.MODE_PRIVATE)
         val lastResetWeek = sharedPrefs.getInt(lastResetWeekKey, -1)
         val currentWeek = Calendar.getInstance().get(Calendar.WEEK_OF_YEAR)
-        val dayOfWeek = getDayOfWeek()
 
-        // Verifica si es el mismo día de la semana que la semana pasada
-        val lastResetDayOfWeek = sharedPrefs.getString("lastResetDayOfWeek", "")
-        if (lastResetWeek != currentWeek || lastResetDayOfWeek != dayOfWeek) {
+        // Si la última semana de reinicio no es la semana actual, reinicia el tiempo
+        if (lastResetWeek != currentWeek) {
             resetTime()
-            val editor = sharedPrefs.edit()
-            editor.putString("lastResetDayOfWeek", dayOfWeek)
-            editor.apply()
         }
     }
 
@@ -58,14 +54,27 @@ class TimeTracker private constructor(private val context: Context) {
 
         // Guarda el tiempo localmente si no hay conexión a Internet
         if (!isConnectedToInternet()) {
+            disconnectedTimeMillis += elapsedTimeMillis
             val previousTimeMillis = sharedPrefs.getLong(dayOfWeek, 0)
             val newTimeMillis = previousTimeMillis + elapsedTimeMillis
             val editor = sharedPrefs.edit()
             editor.putLong(dayOfWeek, newTimeMillis)
             editor.apply()
         } else {
-            // Sincroniza el tiempo con Firestore si hay conexión a Internet
-            syncTimeWithFirestore(dayOfWeek, elapsedTimeMillis)
+            // Suma el tiempo guardado localmente al tiempo en Firestore
+            if (disconnectedTimeMillis > 0) {
+                val previousTimeMillis = sharedPrefs.getLong(dayOfWeek, 0)
+                val newTimeMillis = previousTimeMillis + disconnectedTimeMillis
+                val editor = sharedPrefs.edit()
+                editor.putLong(dayOfWeek, newTimeMillis)
+                editor.apply()
+                disconnectedTimeMillis = 0
+                // Sincroniza el tiempo con Firestore
+                syncTimeWithFirestore(dayOfWeek, newTimeMillis)
+            } else {
+                // Sincroniza el tiempo con Firestore si no hay tiempo local guardado
+                syncTimeWithFirestore(dayOfWeek, elapsedTimeMillis)
+            }
         }
     }
 
@@ -101,7 +110,11 @@ class TimeTracker private constructor(private val context: Context) {
     }
 
     private fun resetTime() {
-        // Reiniciar el tiempo o realizar otras operaciones según sea necesario
+        // Puedes realizar las operaciones necesarias para reiniciar el tiempo
+        // Esto puede incluir la reinicialización de las preferencias compartidas, por ejemplo.
+        val editor = sharedPrefs.edit()
+        editor.clear() // Esto eliminará todos los tiempos guardados localmente
+        editor.apply()
     }
 
     private fun getDayOfWeek(): String {
@@ -119,3 +132,4 @@ class TimeTracker private constructor(private val context: Context) {
         return minutes
     }
 }
+

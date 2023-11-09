@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
@@ -14,6 +15,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.github.mikephil.charting.charts.BarChart
@@ -33,6 +35,20 @@ class HomeFragment : Fragment() {
     private val timeTracker: TimeTracker by lazy { TimeTracker.getInstance(requireContext()) }
     private var timeUser: TimeUser? = null
     private val TAG = "HomeFragment"
+    private val gifResources = listOf(
+        R.drawable.homebar,
+        R.drawable.home_dos,
+        R.drawable.home_tres,
+        R.drawable.home_cuatro,
+        //R.drawable.home_cinco,
+        //R.drawable.home_seis,
+        //R.drawable.home_siete,
+        //R.drawable.home_ocho,
+        //R.drawable.home_nueve,
+
+
+    )
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,6 +58,16 @@ class HomeFragment : Fragment() {
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
+
+        val imageView = rootView.findViewById<ImageView>(R.id.memes) // Cambio aquí
+
+        val randomGifResource = gifResources.random()
+        if (imageView != null) {
+            Glide.with(requireContext())
+                .asGif()
+                .load(randomGifResource)
+                .into(imageView)
+        }
 
         val bienvenidaTextView = rootView.findViewById<TextView>(R.id.bienvenida)
         val promedioTextView = rootView.findViewById<TextView>(R.id.promedioTextView)
@@ -54,72 +80,16 @@ class HomeFragment : Fragment() {
         loadingProgressBar.visibility = View.VISIBLE
         loadingLayout.visibility = View.VISIBLE
 
-        Handler().postDelayed(
-            {
-                loadingProgressBar.visibility = View.GONE
-                loadingLayout.visibility = View.GONE
-            },
-            2000
-        ) // Oculta el ProgressBar y el RelativeLayout después de 2000 milisegundos (2 segundos)
+        Handler().postDelayed({
+            loadingProgressBar.visibility = View.GONE
+            loadingLayout.visibility = View.GONE
+        }, 1500)
 
         // Configurar la visibilidad del ProgressBar
         loadingProgressBar.visibility = View.VISIBLE // Mostrar ProgressBar al cargar
-
-        val listViewSemanal = rootView.findViewById<ListView>(R.id.SemanalrankingListView)
         val listView = rootView.findViewById<ListView>(R.id.rankingListView)
         val userScores = mutableMapOf<String?, Long?>()
 
-
-
-
-        db.collection("scores")
-            .addSnapshotListener { snapshots, e ->
-                if (e != null) {
-                    Log.w(TAG, "Escucha fallida.", e)
-                    return@addSnapshotListener
-                }
-
-                userScores.clear()
-
-                for (document in snapshots!!) {
-                    val userName = document.getString("name")
-                    val weeklyScore = document.getLong("weeklyScore")
-                    userScores[userName] = weeklyScore
-                }
-
-                // Ordena el mapa por valores y toma solo los 10 primeros
-                val top10UserScores =
-                    userScores.toList().sortedByDescending { (_, value) -> value }.take(10)
-
-                // Determinar la posición del usuario actual
-                val currentUser = FirebaseAuth.getInstance().currentUser?.displayName
-                val currentUserScore = userScores[currentUser]
-
-                // Crear una lista para el ArrayAdapter de puntuaciones globales
-                val displayList = top10UserScores.mapIndexed { index, pair ->
-                    val userPosition = index + 1
-                    "$userPosition. ${pair.first}: ${pair.second ?: "N/A"}"
-                }.toMutableList()
-
-                // Si el usuario no está en el top 10, agregarlo como el puesto 11
-                if (currentUser != null && currentUserScore != null) {
-                    val userPosition = displayList.indexOfFirst { it.startsWith(currentUser) }
-                    if (userPosition == -1) {
-                        displayList.add("11. $currentUser: $currentUserScore")
-                    }
-                }
-
-                // Crear un ArrayAdapter personalizado para utilizar el diseño list_item.xml
-                val adapter = ArrayAdapter(
-                    requireContext(),
-                    R.layout.list_item,
-                    R.id.list_item_text,
-                    displayList
-                )
-
-                // Asigna el ArrayAdapter al ListView de puntuaciones globales
-                listViewSemanal.adapter = adapter
-            }
 
         db.collection("scores")
             .addSnapshotListener { snapshots, e ->
@@ -169,6 +139,7 @@ class HomeFragment : Fragment() {
                 // Asigna el ArrayAdapter al ListView de puntuaciones globales
                 listView.adapter = adapter
             }
+        
 
 
         // Obtiene el UID del usuario actualmente autenticado
@@ -198,6 +169,7 @@ class HomeFragment : Fragment() {
                     bienvenidaTextView.text = "Nombre del Usuario"
                 }
 
+
             // Configura la gráfica de barras
             barChart.setDrawGridBackground(false) // Quita la cuadrícula de fondo
             val backgroundColor = ContextCompat.getColor(requireContext(), R.color.gris)
@@ -212,7 +184,7 @@ class HomeFragment : Fragment() {
             xAxis.textSize = 10f // Cambia el tamaño de la fuente de las etiquetas del eje X
 
             // Aquí es donde puedes cambiar la fuente a una personalizada
-            val typeface = ResourcesCompat.getFont(requireContext(), R.font.fonttex)
+            val typeface = ResourcesCompat.getFont(requireContext(), R.font.fuente)
             xAxis.typeface = typeface
             xAxis.textColor = ContextCompat.getColor(requireContext(), R.color.white)
 
@@ -308,7 +280,6 @@ class HomeFragment : Fragment() {
         return rootView
     }
 
-
     override fun onStart() {
         super.onStart()
 
@@ -322,5 +293,6 @@ class HomeFragment : Fragment() {
         // Detiene el rastreo del tiempo cuando la actividad se detiene
         timeTracker.stopTrackingTime()
     }
+
 }
 

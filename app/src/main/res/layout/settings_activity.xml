@@ -7,31 +7,45 @@
     android:layout_height="match_parent">
 
 
+    <Button
+        android:id="@+id/creditos"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@color/transp"
+        android:text="Creditos"
+        android:textAllCaps="false"
+        android:textColor="@color/grisClaro"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
     <TextView
         android:id="@+id/settingsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/fuente"
         android:paddingTop="16dp"
         android:text="@string/configuración"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/logoutButton"
-        android:layout_width="145dp"
+        android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/botton"
         android:text="@string/cerrar_sesion"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/deleteAccountButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,34 +53,74 @@
 
     <Button
         android:id="@+id/deleteAccountButton"
-        android:layout_width="145dp"
+        android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/botton"
         android:text="@string/eliminar_cuenta"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/soporteButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextSizeCheck,TextContrastCheck" />
 
     <Button
         android:id="@+id/soporteButton"
-        android:layout_width="145dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/transp"
+        android:text="PQRS"
+        android:textAllCaps="false"
+        android:textColor="@color/grisClaro"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/creditos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,TextContrastCheck,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/cambiarName"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/botton"
-        android:text="Soporte"
+        android:text="Cambiar Nombre"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/RestablecerContraseña"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/RestablecerContraseña"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/botton"
+        android:text="Restablecer Contraseña"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/logoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="345dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/cambiarName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTitle"
+        app:srcCompat="@drawable/configuracion" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

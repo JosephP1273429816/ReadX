@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="morado">#800080</color>
-    <color name="primarySecond">#008577</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transp">#00FFFFFF</color>
-    <color name="bar">#0C5B54</color>
-    <color name="button_normal">#008577</color>
     <color name="correct_button_pressed">#5500FF00</color>
     <color name="correct_button_normal">#5500FF00</color>
     <color name="wrong_button_pressed">#55FF0000</color>
     <color name="wrong_button_normal">#55FF0000</color>
-    <color name="colorPrimaryDark">#202732</color>
-    <color name="colorIconText">#008577</color>
     <color name="boton">#1B1F28</color>
     <color name="botonesTex">#F3BA33</color>
     <color name= "gris">#222222</color>
+    <color name="grisPClaro">#2B2B2B</color>
     <color name="grisClaro">#7D7F7D </color>
     <color name="hometransp">#FF000000</color>
 </resources>
