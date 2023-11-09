@@ -219,7 +219,7 @@ class SettingsFragment : Fragment() {
 
     private fun showCreditosDialog() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setMessage("Créditos del desarrollo de la aplicación Read:\n" +
+        builder.setMessage("Créditos del desarrollo de la aplicación ReadX:\n" +
                 "---------------------------------------------\n" +
                 "Desarrollador Principal: Joseph\n" +
                 "Revisión de Documentos: Sergio\n" +
@@ -238,7 +238,7 @@ class SettingsFragment : Fragment() {
                 "\n" +
                 "Gracias a su colaboración, hemos logrado un producto que es mucho más que una simple aplicación; es una puerta de entrada a un universo de conocimiento, imaginación y entretenimiento. La aplicación Read ha sido moldeada por sus talentos individuales y la sinergia de su trabajo en equipo, y estamos emocionados por el viaje que aún está por venir.\n" +
                 "\n" +
-                "¡Descarga la aplicación Read y únete a nosotros para disfrutar de una lectura sin límites y descubrir un mundo de posibilidades literarias!"
+                "¡Descarga la aplicación ReadX y únete a nosotros para disfrutar de una lectura sin límites y descubrir un mundo de posibilidades literarias!"
         )
 
         builder.setPositiveButton("Cerrar") { dialog, _ ->
