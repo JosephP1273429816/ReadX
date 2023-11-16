@@ -220,7 +220,7 @@ class SettingsFragment : Fragment() {
     private fun showCreditosDialog() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setMessage("Créditos del desarrollo de la aplicación ReadX:\n" +
-                "---------------------------------------------\n" +
+                "--------------------------------------------------------\n" +
                 "Desarrollador Principal: Joseph\n" +
                 "Revisión de Documentos: Sergio\n" +
                 "Búsqueda de Contenido: Miguel\n" +
@@ -228,11 +228,11 @@ class SettingsFragment : Fragment() {
                 "\n" +
                 "Agradecemos sinceramente a nuestro Destacado Desarrollador Principal, Joseph, por su incansable esfuerzo y creatividad. Su liderazgo y visión fueron la piedra angular en la construcción de esta aplicación. Su dedicación incansable y compromiso con la excelencia han allanado el camino para ofrecer un producto excepcional a nuestros usuarios.\n" +
                 "\n" +
-                "El papel de Sergio en la Revisión de Documentos fue crucial para garantizar la precisión y calidad de nuestra biblioteca. Sus minuciosas revisiones y perfeccionismo han perfeccionado nuestra plataforma, brindando a los usuarios la confianza de que están accediendo a contenido de alta calidad.\n" +
+                "El papel de Jeison en la Revisión de Documentos fue crucial para garantizar la precisión y calidad de nuestra biblioteca. Sus minuciosas revisiones y perfeccionismo han perfeccionado nuestra plataforma, brindando a los usuarios la confianza de que están accediendo a contenido de alta calidad.\n" +
                 "\n" +
                 "Miguel, el experto en la Búsqueda de Contenido, desempeñó un papel fundamental al curar y seleccionar las joyas literarias que hacen que nuestra aplicación sea única. Su pasión por la literatura ha enriquecido la experiencia de nuestros usuarios y ha abierto las puertas a un mundo de conocimiento y entretenimiento.\n" +
                 "\n" +
-                "Jeison, nuestro visionario de Generación de Ideas, ha sido el motor detrás de la innovación en cada aspecto de la aplicación Read. Sus conceptos vanguardistas y su habilidad para anticipar las necesidades de nuestros usuarios han dejado una huella imborrable en nuestro producto, lo que lo hace más atractivo y funcional.\n" +
+                "Sergio, nuestro visionario de Generación de Ideas, ha sido el motor detrás de la innovación en cada aspecto de la aplicación Read. Sus conceptos vanguardistas y su habilidad para anticipar las necesidades de nuestros usuarios han dejado una huella imborrable en nuestro producto, lo que lo hace más atractivo y funcional.\n" +
                 "\n" +
                 "Extendemos nuestro más sincero agradecimiento a todo el equipo que ha contribuido al éxito de la aplicación Read. Cada uno de ustedes ha desempeñado un papel esencial en esta emocionante travesía. Su arduo trabajo, pasión y dedicación son la fuerza impulsora detrás de nuestra misión de brindar una experiencia de lectura excepcional a millones de usuarios en todo el mundo.\n" +
                 "\n" +
